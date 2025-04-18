@@ -19,7 +19,7 @@ Welcome! This is a showcase of full-stack and frontend web applications I built,
 
 ### 🧭 Natours – Eco-Tour Booking App
 
-**Full Stack**: Node.js, Express, MongoDB, Mongoose, Pug, Stripe, Mapbox,  AWS S3, SendGrid, Koyeb 
+**Full Stack**: Node.js, Express, MongoDB, Mongoose, Pug, Stripe, Mapbox, AWS S3, SendGrid, Koyeb 
 Natours is a dynamic eco-tour booking platform featuring a polished UI and secure infrastructure. It integrates **Stripe** for seamless payments, **Mapbox** for map-based exploration, **AWS S3** for scalable image storage, and **SendGrid** for email automation.
 
 - 💳 Stripe payments for booking tours
@@ -86,7 +86,7 @@ A minimalist recipe app that pulls data from a 3rd-party API, supports bookmarki
 
 ## 🛠 Tech Highlights
 
-- **Frontend**: React, HTML5, CSS3, JavaScript (ES6+), Pug, Redux  
+- **Frontend**: React, HTML5, CSS3, SCSS, JavaScript (ES6+), Pug, Redux  
 - **Backend**: Node.js, Express, Spring Boot  
 - **Database**: MongoDB, Mongoose, MySQL  
 - **Cloud/DevOps**: Docker, AWS S3, Netlify, Fly.io, Render, Koyeb  

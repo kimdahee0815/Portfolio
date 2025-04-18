@@ -2427,4 +2427,24 @@ input, select, textarea {
 			transform: translateX(5px);
 	}
 
+	.project-h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.project-h3 a {
+    position: relative;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #6daf22, #86a8e7, #7f7fd5);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 6s ease infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.project-h3:hover a {
+    opacity: 0.8;
+}
 /* PopTrox Modifications */
