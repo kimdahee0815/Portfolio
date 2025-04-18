@@ -77,42 +77,90 @@
 		}
 
 	// Gallery.
-		$window.on('load', function() {
+		// $window.on('load', function() {
 
-			var $gallery = $('.gallery');
+		// 	var $gallery = $('.gallery');
 		
-			$gallery.poptrox({
-				baseZIndex: 10001,
-				useBodyOverflow: false,
-				usePopupEasyClose: false,
-				overlayColor: '#1f2328',
-				overlayOpacity: 0.65,
-				usePopupDefaultStyling: false,
-				usePopupCaption: true,
-				popupLoaderText: '',
-				windowMargin: 50,
-				usePopupNav: true,
-				selector: 'a.image.fit',
+		// 	$gallery.poptrox({
+		// 		baseZIndex: 10001,
+		// 		useBodyOverflow: false,
+		// 		usePopupEasyClose: false,
+		// 		overlayColor: '#1f2328',
+		// 		overlayOpacity: 0.65,
+		// 		usePopupDefaultStyling: false,
+		// 		usePopupCaption: true,
+		// 		popupLoaderText: '',
+		// 		windowMargin: 50,
+		// 		usePopupNav: true,
+		// 		selector: 'a.image.fit',
 				
+		// 	});
+
+
+		// 	// Hack: Adjust margins when 'small' activates.
+		// 		breakpoints.on('>small', function() {
+		// 			$gallery.each(function() {
+		// 				$(this)[0]._poptrox.windowMargin = 50;
+		// 			});
+		// 		});
+
+		// 		breakpoints.on('<=small', function() {
+		// 			$gallery.each(function() {
+		// 				$(this)[0]._poptrox.windowMargin = 5;
+		// 			});
+		// 		});
+
+		// });
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const modal = document.getElementById("demoModal");
+			const img = document.getElementById("demoModalImg");
+			const video = document.getElementById("demoModalVideo");
+			const title = document.getElementById("demoTitle");
+			const desc = document.getElementById("demoDescription");
+			const closeBtn = document.getElementById("closeDemoModal");
+	
+			document.querySelectorAll(".open-demo-modal").forEach(btn => {
+				btn.addEventListener("click", function () {
+					const mediaSrc = btn.getAttribute("data-demo");
+					const mediaType = btn.getAttribute("data-type") || "image";
+					const projectTitle = btn.getAttribute("data-title") || "";
+					const projectDesc = btn.getAttribute("data-desc") || "";
+	
+					title.textContent = projectTitle;
+					desc.innerHTML = projectDesc;
+	
+					if (mediaType === "video") {
+						img.style.display = "none";
+						video.style.display = "block";
+						video.src = mediaSrc;
+					} else {
+						video.style.display = "none";
+						video.pause();
+						img.style.display = "block";
+						img.src = mediaSrc;
+					}
+	
+					modal.style.display = "block";
+				});
 			});
-
-
-			// Hack: Adjust margins when 'small' activates.
-				breakpoints.on('>small', function() {
-					$gallery.each(function() {
-						$(this)[0]._poptrox.windowMargin = 50;
-					});
-				});
-
-				breakpoints.on('<=small', function() {
-					$gallery.each(function() {
-						$(this)[0]._poptrox.windowMargin = 5;
-					});
-				});
-
+	
+			closeBtn.addEventListener("click", () => {
+				modal.style.display = "none";
+				video.pause();
+				video.src = "";
+				img.src = "";
+			});
+	
+			window.addEventListener("click", e => {
+				if (e.target == modal) {
+					modal.style.display = "none";
+					video.pause();
+					video.src = "";
+					img.src = "";
+				}
+			});
 		});
-
-
 	// Section transitions.
 		if (browser.canUse('transition')) {
 

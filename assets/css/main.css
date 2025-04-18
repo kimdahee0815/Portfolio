@@ -1233,6 +1233,36 @@ input, select, textarea {
 			}
 
 /* Poptrox */
+/* 맘에 들었던 style */
+/* .poptrox-popup {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	max-width: 90vw;
+	max-height: 90vh;
+	padding-right: 2em;
+	box-sizing: border-box;
+}
+
+.poptrox-popup img {
+	width: 1150px !important;
+	height: 750px !important;
+	margin-right: 2em;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.poptrox-popup .caption {
+	position: static !important;
+	width: 45%;
+	text-align: left;
+	font-size: 1em;
+	line-height: 1.5;
+	color: #333;
+	background: transparent;
+} */
+ /* 맘에 들었던 style */
 
 	.poptrox-popup {
 		-moz-box-sizing: content-box;
@@ -1240,7 +1270,6 @@ input, select, textarea {
 		-ms-box-sizing: content-box;
 		box-sizing: content-box;
 		background: #fff;
-		padding-bottom: 3em;
 		box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
 	}
 
@@ -2405,7 +2434,7 @@ input, select, textarea {
 		}
 		
 		.work-content {
-			padding: 2rem 3% 1rem 4%;
+			padding: 1rem 3% 1rem 4%;
 		}
 
 		.work-content p {
@@ -2416,7 +2445,6 @@ input, select, textarea {
 	}
 
 		.work-content .project-link {
-			display: inline-block;
 			transition: all 0.3s ease;
 			text-decoration: none;
 			cursor: pointer;
@@ -2429,11 +2457,17 @@ input, select, textarea {
 
 	.project-h3 {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+		justify-content: center;
+		height: 100%;
 }
 
 .project-h3 a {
     position: relative;
+		display: inline-flex;
+    align-items: center;
+		gap: 8px;
     background: linear-gradient(270deg, #ff7e5f, #feb47b, #6daf22, #86a8e7, #7f7fd5);
     background-size: 400% 400%;
     -webkit-background-clip: text;
@@ -2444,7 +2478,132 @@ input, select, textarea {
     transition: opacity 0.3s ease;
 }
 
+.project-h3 a img {
+	display: block;
+	vertical-align: middle;
+	margin: auto 0;
+}
+
 .project-h3:hover a {
     opacity: 0.8;
 }
-/* PopTrox Modifications */
+/* 모달 전체 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0; /* top, left, right, bottom = 0 */
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-box {
+  display: flex;
+  gap: 2rem;
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+	width: 85%;
+	min-height: 80%;
+	margin-left: 110px;
+	margin-top: 110px;
+}
+
+/* 왼쪽: 이미지 or 비디오 */
+.modal-media {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.modal-media img,
+.modal-media video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 오른쪽: 설명 */
+.modal-desc {
+	flex: 1 1 300px;
+	color: #111;
+	max-height: 70vh;
+	overflow-y: auto;
+}
+
+
+.modal-desc h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+
+/* 닫기 버튼 */
+.close {
+  position: absolute;
+  top: 130px;
+  right: 130px;
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-desc p {
+	font-size: 1rem;
+	line-height: 1.8;
+	color: #333;
+	white-space: pre-line;
+	padding: 1rem;
+	max-height: 60vh;
+	overflow-y: auto;
+}
+
+.modal-desc::-webkit-scrollbar {
+	width: 8px;
+}
+
+.modal-desc::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 4px;
+}
+
+.modal-desc::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 4px;
+}
+
+.modal-desc::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+.modal-desc .section-title {
+	color: #6daf22;
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.modal-desc .feature-title {
+	color: #86a8e7;
+	font-weight: 600;
+	display: block;
+	margin-top: 0.5rem;
+}
+
+.modal-desc .feature-detail {
+	color: #666;
+	padding-left: 1.5rem;
+	display: block;
+	font-size: 0.9rem;
+}
+
+.modal-desc .emoji {
+	font-size: 1.2rem;
+	margin-right: 0.5rem;
+}
