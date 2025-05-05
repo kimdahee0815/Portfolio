@@ -1,6 +1,6 @@
 # 🌐 Portfolio Projects by Dahee Kim
 
-Welcome! This is a showcase of full-stack and frontend web applications I built, covering tour booking, streaming, video sharing, and recipe searching platforms. Each project is either fully deployed or presented with a preview and source code. 
+Welcome! This is a showcase of full-stack and frontend web applications I built, covering tour booking, streaming, video sharing, recipe searching, and wedding planning platforms. Each project is either fully deployed or presented with a preview and source code.
 
 ---
 
@@ -12,6 +12,7 @@ Welcome! This is a showcase of full-stack and frontend web applications I built,
 | **Netflix & Chill**  | Full Stack  | React, Spring Boot, MySQL (Railway), Docker, Redux & Context API, Axios, Render, Netlify | Movie streaming, auth, admin/user roles, community board, Dockerized backend                         | [🎬 Link](https://net-flix-clone-dahee-kim.netlify.app/)         |
 | **Wetube**           | Full Stack  | Node.js, Express, MongoDB, Mongoose, Pug, AWS S3, Multer, GitHub OAuth, Webpack, Fly.io | Video upload/playback, comments, GitHub login, real-time interaction, secure media handling          | [📹 Link](https://wetube-reloaded-2024-daheekim.fly.dev/)       |
 | **Forkify**          | Frontend    | Vanilla JS, HTML, CSS, REST API, Netlify                     | Recipe search/bookmark, real-time serving update, modular design, clean architecture                 | [🥄 Link](https://forkify-daheekim.netlify.app/)                 |
+| **WeddingYou**          | Full Stack    | React, Spring Boot, MySQL (Railway), Docker, AWS S3, SMTP, PortOne (Iamport), Netlify                     | Wedding planner-client matching, pre-quote system, secure payments, email notifications                | [💍 Link](https://weddingyou-dahee-kim.netlify.app/)                 |
 
 ---
 
@@ -84,15 +85,48 @@ A minimalist recipe app that pulls data from a 3rd-party API, supports bookmarki
 
 ---
 
+## 💍 WeddingYou – Wedding Planning Platform
+
+**Full Stack**: React, Spring Boot, MySQL, Docker, AWS S3, SMTP, PortOne (Iamport), Netlify, Railway
+
+WeddingYou is an elegant and intuitive platform that streamlines wedding planning — from guest management to vendor scheduling. It features real-time updates, robust JPA entity modeling, and secure cloud-based infrastructure.
+
+### 🌟 Key Features
+
+- 📝 **Pre-Quote Matching System**: Clients submit wedding plans and budgets; planners match based on preferences.
+- 🤝 **Mutual Like-Based Matching**: Swipe-style interface for planner-client connections.
+- 💳 **PortOne (Iamport) Payment Integration**:  
+  - Secure and flexible payment workflow  
+  - Real-time transaction status and handling
+- 📬 **SMTP Email Notifications**: Password reset and transactional emails.
+- 📷 **AWS S3 Image Uploads**: Host profile and event images with CORS configuration.
+- ⚙️ **Spring Data JPA**:  
+  - Entity relationships: `@OneToMany`, `@ManyToOne`, `@ManyToMany`
+- ⚡ **Optimistic UI**: Instant UI updates on RSVP, guest edits, etc.
+- 🌐 **Dockerized Full Stack**: Unified Dockerfile & Compose setup for orchestration.
+- 📱 **Responsive UI**: Mobile-friendly interface.
+- 🔐 **Security**:
+  - Spring DTO/entity validation  
+  - Token-based auth and CORS configuration
+
+### 🏗 Architecture
+
+- Domain-driven Spring Boot REST API  
+- Clean component-based React frontend  
+- Modular design with real-world mapping of domain entities
+
+---
+
 ## 🛠 Tech Highlights
 
-- **Frontend**: React, HTML5, CSS3, SCSS, JavaScript (ES6+), Pug, Redux  
+- **Frontend**: React, Redux, HTML5, CSS3, SCSS, JavaScript (ES6+), Pug  
 - **Backend**: Node.js, Express, Spring Boot  
-- **Database**: MongoDB, Mongoose, MySQL  
-- **Cloud/DevOps**: Docker, AWS S3, Netlify, Fly.io, Render, Koyeb  
-- **APIs**: Stripe, Mapbox, GitHub OAuth, Forkify API, SendGrid  
-- **Auth & Security**: JWT, OAuth, role-based access  
-- **Deployment**: CI/CD pipelines, Docker Compose, environment configs
+- **Database**: MongoDB (Mongoose), MySQL  
+- **Cloud & DevOps**: Docker, Docker Compose, Netlify, Railway, Render, Koyeb, Fly.io  
+- **Storage & Media**: AWS S3  
+- **APIs & Integrations**: Stripe, PortOne (Iamport), Mapbox, GitHub OAuth, Forkify API, SendGrid, SMTP  
+- **Authentication & Security**: JWT, OAuth 2.0, Role-Based Access Control  
+- **Deployment & CI/CD**: CI/CD pipelines, environment-specific configurations  
 
 ---
 
