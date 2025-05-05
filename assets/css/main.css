@@ -2568,7 +2568,8 @@ input, select, textarea {
 
 .modal-desc h3 {
   margin-top: 0;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+	margin-bottom: 1rem;
 }
 
 
@@ -2599,9 +2600,9 @@ input, select, textarea {
 }
 
 .modal-desc p {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	line-height: 1.8;
-	color: #333;
+	color: black;
 	white-space: pre-line;
 	padding: 1rem;
 	max-height: 60vh;
@@ -2628,7 +2629,7 @@ input, select, textarea {
 .modal-desc .section-title {
 	color: #6daf22;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1.7rem;
 	margin-top: 1.5rem;
 	margin-bottom: 0.5rem;
 }
@@ -2636,15 +2637,12 @@ input, select, textarea {
 .modal-desc .feature-title {
 	color: #86a8e7;
 	font-weight: 600;
-	display: block;
-	margin-top: 0.5rem;
+	font-size: 1.3rem;
+	line-height: 2.8rem;
 }
 
 .modal-desc .feature-detail {
-	color: #666;
-	padding-left: 1.5rem;
-	display: block;
-	font-size: 0.9rem;
+	color: black;
 }
 
 .modal-desc .emoji {
