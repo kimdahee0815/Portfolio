@@ -141,12 +141,12 @@
 						img.src = mediaSrc;
 					}
 	
-					modal.style.display = "block";
+					modal.classList.add('show');
 				});
 			});
 	
 			closeBtn.addEventListener("click", () => {
-				modal.style.display = "none";
+				modal.classList.remove('show');
 				video.pause();
 				video.src = "";
 				img.src = "";
@@ -154,7 +154,7 @@
 	
 			window.addEventListener("click", e => {
 				if (e.target == modal) {
-					modal.style.display = "none";
+					modal.classList.remove('show');
 					video.pause();
 					video.src = "";
 					img.src = "";
