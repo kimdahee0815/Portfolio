@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://your-frontend-domain.com'],
+  origin: ['http://localhost:3000', 'https://dahee-kim.netlify.app/'],
   methods: ['POST'],
   allowedHeaders: ['Content-Type'],
 };
