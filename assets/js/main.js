@@ -296,7 +296,7 @@
 			const email = $('input[name="email"]').val();
 			const message = $('textarea[name="message"]').val();
 		
-			fetch("https://backend.com/send-email", {
+			fetch("https://daheekim-portfolio.fly.dev/send-email", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json"
