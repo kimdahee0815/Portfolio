@@ -23,7 +23,7 @@ app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
   const msg = {
-    to: 'kimdahee0815@egmail.com',
+    to: 'kimdahee0815@gmail.com',
     from: email, 
     subject: `📬 New Message from ${name}`,
     text: `Sender: ${name} <${email}>\n\nMessage:\n${message}`,
