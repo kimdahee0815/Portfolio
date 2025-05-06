@@ -1,9 +1,3 @@
-/*
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	var	$window = $(window),
@@ -293,6 +287,34 @@
 
 			$(document).on('click', '.project-link', function(e) {
 				e.stopPropagation(); // Stop event bubbling
+		});
+
+		$('#contact-form').on('submit', function (e) {
+			e.preventDefault();
+		
+			const name = $('input[name="name"]').val();
+			const email = $('input[name="email"]').val();
+			const message = $('textarea[name="message"]').val();
+		
+			fetch("https://backend.com/send-email", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({ name, email, message })
+			})
+			.then(res => {
+				if (res.ok) {
+					alert("✅ Sent Your Message successfully!");
+					$('#contact-form')[0].reset(); 
+				} else {
+					alert("❌ Try again.");
+				}
+			})
+			.catch(err => {
+				console.error(err);
+				alert("⚠️ Server error!");
+			});
 		});
 
 })(jQuery);

@@ -1,0 +1,22 @@
+{
+  "name": "daheekim_portfolio",
+  "version": "1.0.0",
+  "description": "Welcome! This is a showcase of full-stack and frontend web applications I built, covering tour booking, streaming, video sharing, recipe searching, and wedding planning platforms. Each project is either fully deployed or presented with a preview and source code.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1"
+  }
+}
