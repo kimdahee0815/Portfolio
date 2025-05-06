@@ -8,7 +8,13 @@ const PORT = process.env.PORT || 3000;
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-app.use(cors());
+const corsOptions = {
+  origin: ['http://localhost:3000', 'https://your-frontend-domain.com'],
+  methods: ['POST'],
+  allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.post('/send-email', async (req, res) => {
