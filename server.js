@@ -9,12 +9,14 @@ const PORT = process.env.PORT || 3000;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://dahee-kim.netlify.app/'],
-  methods: ['POST'],
+  origin: 'https://dahee-kim.netlify.app', 
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 };
 
 app.use(cors(corsOptions));
+
+app.options('/send-email', cors(corsOptions));
 app.use(express.json());
 
 app.post('/send-email', async (req, res) => {
