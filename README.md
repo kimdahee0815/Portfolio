@@ -146,7 +146,7 @@ A minimalist recipe app that pulls data from a 3rd-party API, supports bookmarki
 
 ## 🛠 Tech Highlights
 
-- **Frontend**: Next.js, React, Redux, Context API, Tanstack Query, HTML5, CSS3, SCSS,Tailwind CSS, JavaScript (ES6+), Pug 
+- **Frontend**: Next.js, React, Redux, Context API, Tanstack Query, HTML5, CSS3, SCSS, Tailwind CSS, JavaScript (ES6+), Pug 
 - **Backend**: Next.js, Node.js, Express, Spring Boot, Prisma  
 - **Database**: Redis, PostgreSQL, MongoDB (Mongoose), MySQL  
 - **Cloud & DevOps**: Docker, Docker Compose, Vercel, Netlify, Railway, Render, Koyeb, Fly.io  
