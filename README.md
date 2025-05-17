@@ -21,7 +21,7 @@ Each project is either fully deployed or presented with a preview and source cod
 
 ## 📍 Detailed Project Descriptions
 
-### 🌩️ ThinkStorm – Real-World Collaboration Platform (Ongoing)
+### 🌩️ ThinkStorm – Real-World Developer Collaboration Platform (Ongoing)
 
 **Full Stack**: Nest.js, Next.js, PostgreSQL, Prisma, Redis, Docker, Fly.io, Vercel, AWS S3, SendGrid, GitHub OAuth
 ThinkStorm is a full-stack collaboration platform designed to empower developers, learners, and innovators to bring ideas to life through real-world projects. The platform supports team-based project building, learning bootcamps, and skill-based hiring—all within a secure, scalable environment.
