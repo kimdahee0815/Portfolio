@@ -289,6 +289,41 @@
 				e.stopPropagation(); // Stop event bubbling
 		});
 
+	$(document).on("click", ".open-demo-modal", function () {
+  const demoUrl = $(this).data("demo");
+  const type = $(this).data("type");
+  const title = $(this).data("title");
+  const desc = $(this).data("desc");
+
+  $("#demoTitle").html(title);
+  $("#demoDescription").html(desc);
+
+  $("#demoModalVideo").hide();
+  $("#demoModalImg").hide();
+
+  if (type === "video") {
+    const $video = $("#demoModalVideo");
+    $video.attr("src", demoUrl);
+    $video.show();
+    $video.get(0).playbackRate = 2.0; 
+  } else if (type === "image") {
+    $("#demoModalImg").attr("src", demoUrl).show();
+  }
+
+  $("#demoModal").fadeIn();
+});
+
+$("#closeDemoModal").on("click", function () {
+  $("#demoModal").fadeOut();
+
+  const video = $("#demoModalVideo").get(0);
+  video.pause();
+  video.currentTime = 0;
+  $("#demoModalVideo").attr("src", "").hide();
+
+  $("#demoModalImg").attr("src", "").hide();
+});
+
 		$('#contact-form').on('submit', function (e) {
 			e.preventDefault();
 		
