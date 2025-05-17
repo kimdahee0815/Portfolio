@@ -1,6 +1,8 @@
 # 🌐 Portfolio Projects by Dahee Kim
 
-Welcome! This is a showcase of full-stack and frontend web applications I built, covering tour booking, streaming, video sharing, recipe searching, and wedding planning platforms. Each project is either fully deployed or presented with a preview and source code.
+Welcome! This is a showcase of full-stack and frontend web applications I built,
+including web applications such as a full-stack platform for global developer collaboration (Ongoing Project), a tour booking system, a wedding planning tool, a movie search engine, a video sharing site and a recipe finder.
+Each project is either fully deployed or presented with a preview and source code.
 
 ---
 
@@ -8,15 +10,40 @@ Welcome! This is a showcase of full-stack and frontend web applications I built,
 
 | Project              | Type        | Tech Stack                                                  | Key Features                                                                                         | Live Demo |
 |----------------------|-------------|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------|
+| **Thinkstorm(Ongoing)**          | Full Stack  | Nest.js, Next.js, Prisma, PostgreSQL, AWS S3, SendGrid, GitHub OAuth, Redis, Docker, Fly.io, Vercel | A full-stack collaboration platform where developers team up, build real projects, and grow together.                    | [🌍 Link](https://thinkstorm.app/) |
 | **Natours**          | Full Stack  | Node.js, Express, MongoDB, Mongoose, Pug, Stripe, Mapbox, AWS S3, SendGrid, Koyeb | Tour booking, payments, transactional emails, role-based access, admin dashboard                    | [🌍 Link](https://helpful-prawn-natours-dh-777b7d7d.koyeb.app/) |
+| **WeddingYou**          | Full Stack    | React, Spring Boot, MySQL (Railway), Docker, AWS S3, SMTP, PortOne (Iamport), Netlify, Fly.io                    | Wedding planner-client matching, pre-quote system, secure payments, email notifications                | [💍 Link](https://weddingyou-dahee-kim.netlify.app/)                 |
 | **Netflix & Chill**  | Full Stack  | React, Spring Boot, MySQL (Railway), Docker, Redux & Context API, Axios, Render, Netlify | Movie streaming, auth, admin/user roles, community board, Dockerized backend                         | [🎬 Link](https://net-flix-clone-dahee-kim.netlify.app/)         |
 | **Wetube**           | Full Stack  | Node.js, Express, MongoDB, Mongoose, Pug, AWS S3, Multer, GitHub OAuth, Webpack, Fly.io | Video upload/playback, comments, GitHub login, real-time interaction, secure media handling          | [📹 Link](https://wetube-reloaded-2024-daheekim.fly.dev/)       |
 | **Forkify**          | Frontend    | Vanilla JS, HTML, CSS, REST API, Netlify                     | Recipe search/bookmark, real-time serving update, modular design, clean architecture                 | [🥄 Link](https://forkify-daheekim.netlify.app/)                 |
-| **WeddingYou**          | Full Stack    | React, Spring Boot, MySQL (Railway), Docker, AWS S3, SMTP, PortOne (Iamport), Netlify                     | Wedding planner-client matching, pre-quote system, secure payments, email notifications                | [💍 Link](https://weddingyou-dahee-kim.netlify.app/)                 |
 
 ---
 
 ## 📍 Detailed Project Descriptions
+
+### 🌩️ ThinkStorm – Real-World Collaboration Platform (Ongoing)
+
+**Full Stack**: Nest.js, Next.js, PostgreSQL, Prisma, Redis, Docker, Fly.io, Vercel, AWS S3, SendGrid, GitHub OAuth
+ThinkStorm is a full-stack collaboration platform designed to empower developers, learners, and innovators to bring ideas to life through real-world projects. The platform supports team-based project building, learning bootcamps, and skill-based hiring—all within a secure, scalable environment.
+
+- 🧱 Full-stack architecture: modular, scalable system with Nest.js + Next.js
+- 🔐 JWT-based authentication and secure session handling
+- 📬 SendGrid integration:
+  - Automated onboarding emails
+  - Password reset flow
+- 🧠 Redis-backed caching and rate limiting for performance & security
+- 🧪 CI/CD pipelines: Jest testing integrated with Fly.io deployment
+- ☁️ AWS S3: scalable image and asset storage with public access control
+- 🐳 Containerized using Docker, deployed on Fly.io and Vercel
+- 🔧 GitHub OAuth for easy and secure user onboarding
+- 📁 Feature-rich collaboration system: Project creation, tagging, and team roles
+- 🎯 Weekly coding challenges & global leaderboard
+- 📚 Guided learning bootcamps with certifications
+- 💼 Resume-free hiring based on project contributions
+- 🧑‍🏫 Mentorship support & structured onboarding system
+- 🌍 Global developer networking through real-time updates and notifications
+
+--- 
 
 ### 🧭 Natours – Eco-Tour Booking App
 
@@ -41,6 +68,38 @@ Natours is a dynamic eco-tour booking platform featuring a polished UI and secur
 - 📈 Billing graph and summary table for both users and admins to visualize booking history, amount spent
 - 🧱 Clean MVC architecture
 
+---
+
+
+## 💍 WeddingYou – Wedding Planning Platform
+
+**Full Stack**: React, Spring Boot, MySQL, Docker, AWS S3, SMTP, PortOne (Iamport), Netlify, Railway, Fly.io
+
+WeddingYou is an elegant and intuitive platform that streamlines wedding planning — from guest management to vendor scheduling. It features real-time updates, robust JPA entity modeling, and secure cloud-based infrastructure.
+
+### 🌟 Key Features
+
+- 📝 **Pre-Quote Matching System**: Clients submit wedding plans and budgets; planners match based on preferences.
+- 🤝 **Mutual Like-Based Matching**: Swipe-style interface for planner-client connections.
+- 💳 **PortOne (Iamport) Payment Integration**:  
+  - Secure and flexible payment workflow  
+  - Real-time transaction status and handling
+- 📬 **SMTP Email Notifications**: Password reset and transactional emails.
+- 📷 **AWS S3 Image Uploads**: Host profile and event images with CORS configuration.
+- ⚙️ **Spring Data JPA**:  
+  - Entity relationships: `@OneToMany`, `@ManyToOne`, `@ManyToMany`
+- ⚡ **Optimistic UI**: Instant UI updates on RSVP, guest edits, etc.
+- 🌐 **Dockerized Full Stack**: Unified Dockerfile & Compose setup for orchestration.
+- 📱 **Responsive UI**: Mobile-friendly interface.
+- 🔐 **Security**:
+  - Spring DTO/entity validation  
+  - Token-based auth and CORS configuration
+
+### 🏗 Architecture
+
+- Domain-driven Spring Boot REST API  
+- Clean component-based React frontend  
+- Modular design with real-world mapping of domain entities
 
 ---
 
@@ -85,44 +144,13 @@ A minimalist recipe app that pulls data from a 3rd-party API, supports bookmarki
 
 ---
 
-## 💍 WeddingYou – Wedding Planning Platform
-
-**Full Stack**: React, Spring Boot, MySQL, Docker, AWS S3, SMTP, PortOne (Iamport), Netlify, Railway
-
-WeddingYou is an elegant and intuitive platform that streamlines wedding planning — from guest management to vendor scheduling. It features real-time updates, robust JPA entity modeling, and secure cloud-based infrastructure.
-
-### 🌟 Key Features
-
-- 📝 **Pre-Quote Matching System**: Clients submit wedding plans and budgets; planners match based on preferences.
-- 🤝 **Mutual Like-Based Matching**: Swipe-style interface for planner-client connections.
-- 💳 **PortOne (Iamport) Payment Integration**:  
-  - Secure and flexible payment workflow  
-  - Real-time transaction status and handling
-- 📬 **SMTP Email Notifications**: Password reset and transactional emails.
-- 📷 **AWS S3 Image Uploads**: Host profile and event images with CORS configuration.
-- ⚙️ **Spring Data JPA**:  
-  - Entity relationships: `@OneToMany`, `@ManyToOne`, `@ManyToMany`
-- ⚡ **Optimistic UI**: Instant UI updates on RSVP, guest edits, etc.
-- 🌐 **Dockerized Full Stack**: Unified Dockerfile & Compose setup for orchestration.
-- 📱 **Responsive UI**: Mobile-friendly interface.
-- 🔐 **Security**:
-  - Spring DTO/entity validation  
-  - Token-based auth and CORS configuration
-
-### 🏗 Architecture
-
-- Domain-driven Spring Boot REST API  
-- Clean component-based React frontend  
-- Modular design with real-world mapping of domain entities
-
----
-
 ## 🛠 Tech Highlights
 
-- **Frontend**: React, Redux, HTML5, CSS3, SCSS, JavaScript (ES6+), Pug  
-- **Backend**: Node.js, Express, Spring Boot  
-- **Database**: MongoDB (Mongoose), MySQL  
-- **Cloud & DevOps**: Docker, Docker Compose, Netlify, Railway, Render, Koyeb, Fly.io  
+- **Frontend**: Next.js, React, Redux, Context API, Tanstack Query, HTML5, CSS3, SCSS,Tailwind CSS, JavaScript (ES6+), Pug 
+- **Backend**: Next.js, Node.js, Express, Spring Boot, Prisma  
+- **Database**: Redis, PostgreSQL, MongoDB (Mongoose), MySQL  
+- **Cloud & DevOps**: Docker, Docker Compose, Vercel, Netlify, Railway, Render, Koyeb, Fly.io  
+- **Testing**: Jest, Cypress, Vitest, Storybook
 - **Storage & Media**: AWS S3  
 - **APIs & Integrations**: Stripe, PortOne (Iamport), Mapbox, GitHub OAuth, Forkify API, SendGrid, SMTP  
 - **Authentication & Security**: JWT, OAuth 2.0, Role-Based Access Control  
