@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://dahee-kim.netlify.app'],
+  origin: ['http://localhost:5503', 'https://dahee-kim.netlify.app'],
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 };
@@ -47,7 +47,7 @@ app.post('/send-email', async (req, res) => {
     await sgMail.send(msg);
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error("SendGrid error:", error);
+    console.error("SendGrid error:", JSON.stringify(error.response.body, null, 2));
     res.status(500).json({ success: false, error: error.message });
   }
 });
