@@ -343,7 +343,7 @@ $("#closeDemoModal").on("click", function () {
 					alert("✅ Sent Your Message successfully!");
 					$('#contact-form')[0].reset(); 
 				} else {
-					alert("❌ Try again.");
+					alert("❌ Try again. Use gmail account please!");
 				}
 			})
 			.catch(err => {
