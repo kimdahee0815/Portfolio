@@ -2367,7 +2367,8 @@ input, select, textarea {
 		top: 50%;
 		left: 50%;
 		width: 100vw;
-		height: auto;
+		height: 100%;
+		min-height: 100vh;
 		transform: translate(-50%, -50%);
 		object-fit: cover;
 	}
