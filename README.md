@@ -45,7 +45,7 @@ ThinkStorm is a full-stack collaboration platform designed to empower developers
 
 --- 
 
-### 🧭 Natours – Eco-Tour Booking App
+## 🧭 Natours – Eco-Tour Booking App
 
 **Full Stack**: Node.js, Express, MongoDB, Mongoose, Pug, Stripe, Mapbox, AWS S3, SendGrid, Koyeb 
 Natours is a dynamic eco-tour booking platform featuring a polished UI and secure infrastructure. It integrates **Stripe** for seamless payments, **Mapbox** for map-based exploration, **AWS S3** for scalable image storage, and **SendGrid** for email automation.
@@ -103,7 +103,7 @@ WeddingYou is an elegant and intuitive platform that streamlines wedding plannin
 
 ---
 
-### 🎬 Netflix and Chill – Streaming Platform
+## 🎬 Netflix and Chill – Streaming Platform
 
 **Full Stack**: React, Spring Boot, MySQL (Railway), Docker, Redux & Context API, Axios, Render, Netlify
 A Netflix-inspired platform with a modern responsive UI, real-time data fetching, user-auth with roles, and a full-featured admin dashboard. Deployed with Docker for easy scaling.
@@ -116,7 +116,7 @@ A Netflix-inspired platform with a modern responsive UI, real-time data fetching
 
 ---
 
-### 🎥 Wetube – YouTube-Style Video Sharing Platform
+## 🎥 Wetube – YouTube-Style Video Sharing Platform
 
 **Full Stack**: Node.js, Express, MongoDB, Mongoose, Pug, AWS S3, Multer, GitHub OAuth, Webpack, Fly.io
 Wetube enables video sharing, real-time commenting, GitHub-based login, and seamless video uploads. It emphasizes security and UX, with AWS for reliable file hosting.
@@ -132,7 +132,7 @@ Wetube enables video sharing, real-time commenting, GitHub-based login, and seam
 
 ---
 
-### 🍽️ Forkify – Interactive Recipe Finder
+## 🍽️ Forkify – Interactive Recipe Finder
 
 **Frontend Only**: Vanilla JS, HTML, CSS, Netlify  
 A minimalist recipe app that pulls data from a 3rd-party API, supports bookmarking, and adjusts servings in real-time. Built from scratch without frameworks to demonstrate core JavaScript proficiency.
