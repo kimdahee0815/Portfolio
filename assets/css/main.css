@@ -552,7 +552,8 @@ input, select, textarea {
 			}
 			.modal-desc #demoTitle {
 				font-size: 2rem;
-				line-height: 1.25em;
+				line-height: 1em;
+				text-align: center;
 			}
 			.modal-desc #demoDescription .section-title{
 				font-size: 1.2rem;
