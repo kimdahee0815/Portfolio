@@ -532,6 +532,19 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 1200px) {
+			.video-wrapper .bg-video {
+    		 position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		height: 100%;
+    		min-height: 100vh;
+    		object-fit: cover;
+    		width: 100vw;
+    		object-position: left center;
+			}
+		}
+
 		@media screen and (max-width: 1105px) {
 
 			body, input, textarea, select {
@@ -582,6 +595,15 @@ input, select, textarea {
 			}
 			.modal-desc #demoDescription .feature-title{
 				font-size: 1rem;
+			}
+			.video-wrapper .bg-video {
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		height: 100%;
+    		min-height: 100vh;
+    		transform: translate(-30%, -50%);
+    		object-fit: cover;
 			}
 		}
 
@@ -2382,9 +2404,8 @@ input, select, textarea {
 		background: url("images/fulls/profile1.png"), url("../../images/fulls/profile1.png");
 		background-size: contain, cover;
 		background-attachment: fixed;
-		background-position: top left, center;
+		background-position: top center, top right;
 		background-repeat: repeat, no-repeat;
-		height: 100vh;
 	}
 
 /* Two */
