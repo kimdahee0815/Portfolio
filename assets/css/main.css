@@ -2609,12 +2609,12 @@ input, select, textarea {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s ease; /* Add smooth transition */
+    transition: all 0.3s ease; 
 }
 
 .close:hover {
 	background: #333;
-	transform: rotate(90deg); /* Add rotation effect on hover */
+	transform: rotate(90deg);
 }
 
 .modal-desc p {
