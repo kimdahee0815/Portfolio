@@ -65,7 +65,7 @@ app.post('/send-email', async (req, res) => {
       from: email,
       subject: `📬 New Message from ${name} - My Portfolio`,
     })
-    console.log(res);
+    console.log(res.data);
     res.status(200).json({ success: true });
     // await sgMail.send(msg);
     // res.status(200).json({ success: true });
