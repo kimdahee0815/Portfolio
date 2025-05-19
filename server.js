@@ -47,7 +47,7 @@ app.post('/send-email', async (req, res) => {
 
   try {
     const data = {
-      "to": "9d01lpwjn7ey6vo2@customer.fly.io",
+      "to": "kimdahee0815@gmail.com",
       "template": "hello",
       "templateVariables": {
         "message": message,
