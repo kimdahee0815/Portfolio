@@ -22,68 +22,43 @@ app.options('/send-email', cors(corsOptions));
 app.use(express.json());
 
 app.post('/send-email', async (req, res) => {
-  const { name, email, message } = req.body;
+   if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
-  // const msg = {
-  //   to: 'kimdahee0815@gmail.com',
-  //   from: email, 
-  //   subject: `📬 New Message from ${name}`,
-  //   text: `Sender: ${name} <${email}>\n\nMessage:\n${message}`,
-  //   html: `
-  //   <div style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px;">
-  //     <h2 style="color: #333;">📬 New Message from <strong>${name}</strong></h2>
-  //     <p><strong>Sender Email:</strong> ${email}</p>
-  //     <p><strong>Message:</strong></p>
-  //     <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; white-space: pre-wrap;">
-  //       ${message}
-  //     </div>
-  //     <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc;" />
-  //     <footer style="font-size: 0.9em; color: #999; text-align: center;">
-  //       This message was sent from your portfolio contact form.
-  //     </footer>
-  //   </div>
-  // `
-  // };
+  const { name, message, email } = req.body;
 
   try {
     const data = {
-      "to": "kimdahee0815@gmail.com",
-      "template": "hello",
-      "templateVariables": {
-        "message": message,
-        "name": name,
-        "subject": `📬 New Message from ${name} - My Portfolio`
+      to: "kimdahee0815@gmail.com",
+      template: "hello",
+      templateVariables: {
+        name,
+        message,
+        subject: `📬 New Message from ${name} - My Portfolio`,
+        email 
       }
-    }
-    // await enveloop.sendMessage({
-    //   "to": "kimdahee0815@gmail.com",
-    //   "template": "hello",
-    //   "templateVariables": {
-    //     "message": message,
-    //     "name": name,
-    //     "subject": `📬 New Message from ${name} - My Portfolio`
-    //   }
-    // })
-    await fetch("https://api.enveloop.com/messages", {
+    };
+
+    const response = await fetch("https://api.enveloop.com/messages", {
       method: "POST",
-      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
-        "Authorization": process.env.ENVELOOP_LIVE_API_KEY,
+        "Authorization": `Bearer ${process.env.ENVELOOP_LIVE_API_KEY}`, 
       },
-    })
+      body: JSON.stringify(data),
+    });
 
-    // enveloop.templateInfo({ template: 'welcome-email' })
-    //   .then(res => console.log(res))
-    //   .catch(err => console.log(err))
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("Enveloop error:", errorData);
+      return res.status(500).json({ success: false, error: errorData });
+    }
+
     res.status(200).json({ success: true });
-    // await sgMail.send(msg);
-    // res.status(200).json({ success: true });
   } catch (error) {
-    console.log(error);
+    console.error("Server error:", error);
     res.status(500).json({ success: false, error: error.message });
-    // console.error("SendGrid error:", JSON.stringify(error.response.body, null, 2));
-    // res.status(500).json({ success: false, error: error.message });
   }
 });
 
