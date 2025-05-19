@@ -2186,15 +2186,6 @@ input, select, textarea {
 			background-attachment: scroll !important;
 		}
 
-		@media screen and (max-width: 1920px) {
-
-			.main.style2 .content {
-				width: 40%;
-				height: 90vh;
-			}
-
-		}
-
 		@media screen and (max-width: 1280px) {
 
 			.main.style2 .content {
