@@ -47,7 +47,20 @@ app.post('/send-email', async (req, res) => {
 
   try {
     await enveloop.sendMessage({
-      template: 'Hello',
+      template: `
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px;">
+      <h2 style="color: #333;">📬 New Message from <strong>${name}</strong></h2>
+      <p><strong>Sender Email:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; white-space: pre-wrap;">
+        ${message}
+      </div>
+      <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc;" />
+      <footer style="font-size: 0.9em; color: #999; text-align: center;">
+        This message was sent from your portfolio contact form.
+      </footer>
+    </div>
+    `,
       message,
       to: 'kimdahee0815@gmail.com',
       from: email,
