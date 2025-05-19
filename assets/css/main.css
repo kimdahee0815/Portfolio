@@ -541,9 +541,25 @@ input, select, textarea {
 		}
 
 		
-		@media screen and (max-width: 860px) {
-
-			
+		@media screen and (max-width: 970px) {	
+			.modal-content-box .modal-media {
+    		flex: 1 1 430px;
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		overflow: hidden;
+				height: unset;
+			}
+			.modal-desc #demoTitle {
+				font-size: 2rsem;
+				line-height: 1.25em;
+			}
+			.modal-desc #demoDescription .section-title{
+				font-size: 1.2rem;
+			}
+			.modal-desc #demoDescription .feature-title{
+				font-size: 1.1rem;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
