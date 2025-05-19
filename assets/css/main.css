@@ -548,7 +548,7 @@ input, select, textarea {
     		align-items: center;
     		justify-content: center;
     		overflow: hidden;
-				height: unset;
+				height: 40vh;
 			}
 			.modal-desc #demoTitle {
 				font-size: 2rem;
@@ -560,6 +560,28 @@ input, select, textarea {
 			}
 			.modal-desc #demoDescription .feature-title{
 				font-size: 1.1rem;
+			}
+		}
+
+		@media screen and (max-width: 550px) {	
+			.modal-content-box .modal-media {
+    		flex: 1 1 430px;
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		overflow: hidden;
+				height: 30vh;
+			}
+			.modal-desc #demoTitle {
+				font-size: 1.7rem;
+				line-height: 1em;
+				text-align: center;
+			}
+			.modal-desc #demoDescription .section-title{
+				font-size: 1.1rem;
+			}
+			.modal-desc #demoDescription .feature-title{
+				font-size: 1rem;
 			}
 		}
 
