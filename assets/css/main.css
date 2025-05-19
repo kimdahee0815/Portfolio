@@ -2434,7 +2434,7 @@ input, select, textarea {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: #000;
+			background: transparent;
 		}
 
 		.gallery article .work-img video {
