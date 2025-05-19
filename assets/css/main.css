@@ -502,7 +502,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: "Source Sans Pro", "sans-serif";
 		font-weight: 300;
-		font-size: 18pt;
+		font-size: 1.6rem;
 		line-height: 1.75em;
 		color: #39454b;
 		letter-spacing: 0.025em;
@@ -511,7 +511,7 @@ input, select, textarea {
 		@media screen and (max-width: 1920px) {
 
 			body, input, textarea, select {
-				font-size: 17pt;
+				font-size: 1.45rem;
 			}
 
 		}
@@ -519,23 +519,23 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			body, input, textarea, select {
-				font-size: 15pt;
+				font-size: 1.3rem;
 			}
 
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1400px) {
 
 			body, input, textarea, select {
-				font-size: 13pt;
+				font-size: 1.2rem;
 			}
 
 		}
 
-		@media screen and (max-width: 1000px) {
+		@media screen and (max-width: 1105px) {
 
 			body, input, textarea, select {
-				font-size: 13pt;
+				font-size: 1.1rem;
 			}
 
 		}
@@ -585,10 +585,10 @@ input, select, textarea {
 			}
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			body, input, textarea, select {
-				font-size: 12pt;
+				font-size: 1rem;
 				line-height: 1.5em;
 			}
 
@@ -612,7 +612,7 @@ input, select, textarea {
 		letter-spacing: -0.05em;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 846px) {
 
 		h2 {
 			font-size: 1.5em;
@@ -680,7 +680,7 @@ input, select, textarea {
 			padding: 3em 2.5em 2em 2.5em;
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			.box {
 				padding: 1em;
@@ -1474,7 +1474,7 @@ input, select, textarea {
 			opacity: 1.0 !important;
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			.poptrox-popup .nav-next:before,
 			.poptrox-popup .nav-previous:before {
@@ -1984,7 +1984,7 @@ input, select, textarea {
 						outline: 0;
 					}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			#header {
 				height: 2.5em;
@@ -2017,7 +2017,7 @@ input, select, textarea {
 		animation: gradientAnimation 6s ease infinite;
 	}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			body {
 				padding-top: 2.5em;
@@ -2109,7 +2109,7 @@ input, select, textarea {
 				-ms-transform: translateZ(0);
 				transform: translateZ(0);
 				position: relative;
-				width: 35%;
+				width: 45%;
 				margin: 0;
 			}
 
@@ -2186,6 +2186,14 @@ input, select, textarea {
 			background-attachment: scroll !important;
 		}
 
+		@media screen and (max-width: 1400px) {
+
+			.main.style2 .content {
+				width: 55%;
+			}
+
+		}
+
 		@media screen and (max-width: 1280px) {
 
 			.main.style2 .content {
@@ -2194,7 +2202,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 1000px) {
+		@media screen and (max-width: 1100px) {
 
 			.main.style2 .content {
 				width: 60%;
@@ -2202,7 +2210,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			.main > .content br {
 				display: none;
@@ -2302,7 +2310,7 @@ input, select, textarea {
 				font-size: 0.9em;
 			}
 
-		@media screen and (max-width: 1000px) {
+		@media screen and (max-width: 1100px) {
 
 			#footer {
 				-moz-flex-direction: column;
@@ -2324,7 +2332,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			#footer ul.menu li {
 				border-left: none;
@@ -2382,12 +2390,10 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/fulls/profile2.jpg"), url("../../images/fulls/profile2.jpg");
-		background-size: contain, cover;
+		background: url("../../images/fulls/profile2.jpg");
+		background-size: cover;
 		background-attachment: fixed;
-		background-position: top left, center right;
 		background-repeat: repeat, no-repeat;
-		height: 100vh;
 	}
 
 	.video-wrapper {
@@ -2437,7 +2443,7 @@ input, select, textarea {
 			transform: translateY(100%);
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 846px) {
 
 			#contact .box {
 				padding: 1.5em 1.5em 2em 1.5em;
