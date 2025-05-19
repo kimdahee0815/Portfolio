@@ -46,6 +46,15 @@ app.post('/send-email', async (req, res) => {
   // };
 
   try {
+    const data = {
+      "to": "9d01lpwjn7ey6vo2@customer.fly.io",
+      "template": "hello",
+      "templateVariables": {
+        "message": message,
+        "name": name,
+        "subject": `📬 New Message from ${name} - My Portfolio`
+      }
+    }
     await enveloop.sendMessage({
       "to": "kimdahee0815@gmail.com",
       "template": "hello",
@@ -55,10 +64,18 @@ app.post('/send-email', async (req, res) => {
         "subject": `📬 New Message from ${name} - My Portfolio`
       }
     })
-    console.log(res);
-    enveloop.templateInfo({ template: 'welcome-email' })
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+    await fetch("https://api.enveloop.com/messages", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": process.env.ENVELOOP_LIVE_API_KEY,
+      },
+    })
+
+    // enveloop.templateInfo({ template: 'welcome-email' })
+    //   .then(res => console.log(res))
+    //   .catch(err => console.log(err))
     res.status(200).json({ success: true });
     // await sgMail.send(msg);
     // res.status(200).json({ success: true });
