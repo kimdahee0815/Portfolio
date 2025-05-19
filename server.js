@@ -54,6 +54,9 @@ app.post('/send-email', async (req, res) => {
       subject: `📬 New Message from ${name} - My Portfolio`,
     })
     console.log(res);
+    enveloop.templateInfo({ template: 'welcome-email' })
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
     res.status(200).json({ success: true });
     // await sgMail.send(msg);
     // res.status(200).json({ success: true });
