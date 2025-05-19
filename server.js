@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const sgMail = require('@sendgrid/mail');
+const { Enveloop } = require('enveloop')
+const enveloop = new Enveloop({ apiKey: process.env.ENVELOOP_LIVE_API_KEY })
 require('dotenv').config();
 
 const app = express();
@@ -22,12 +24,30 @@ app.use(express.json());
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
-  const msg = {
-    to: 'kimdahee0815@gmail.com',
-    from: email, 
-    subject: `📬 New Message from ${name}`,
-    text: `Sender: ${name} <${email}>\n\nMessage:\n${message}`,
-    html: `
+  // const msg = {
+  //   to: 'kimdahee0815@gmail.com',
+  //   from: email, 
+  //   subject: `📬 New Message from ${name}`,
+  //   text: `Sender: ${name} <${email}>\n\nMessage:\n${message}`,
+  //   html: `
+  //   <div style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px;">
+  //     <h2 style="color: #333;">📬 New Message from <strong>${name}</strong></h2>
+  //     <p><strong>Sender Email:</strong> ${email}</p>
+  //     <p><strong>Message:</strong></p>
+  //     <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; white-space: pre-wrap;">
+  //       ${message}
+  //     </div>
+  //     <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc;" />
+  //     <footer style="font-size: 0.9em; color: #999; text-align: center;">
+  //       This message was sent from your portfolio contact form.
+  //     </footer>
+  //   </div>
+  // `
+  // };
+
+  try {
+    enveloop.sendMessage({
+      html: `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px;">
       <h2 style="color: #333;">📬 New Message from <strong>${name}</strong></h2>
       <p><strong>Sender Email:</strong> ${email}</p>
@@ -40,15 +60,24 @@ app.post('/send-email', async (req, res) => {
         This message was sent from your portfolio contact form.
       </footer>
     </div>
-  `
-  };
-
-  try {
-    await sgMail.send(msg);
-    res.status(200).json({ success: true });
+  `,
+      to: 'kimdahee0815@gmail.com',
+      from: email,
+      subject: `📬 New Message from ${name} - My Portfolio`,
+    })
+    .then(res => {
+      console.log(res);
+      res.status(200).json({ success: true });
+    })
+    .catch(err => {
+      console.log(err);
+       res.status(500).json({ success: false, error: error.message });
+    })
+    // await sgMail.send(msg);
+    // res.status(200).json({ success: true });
   } catch (error) {
-    console.error("SendGrid error:", JSON.stringify(error.response.body, null, 2));
-    res.status(500).json({ success: false, error: error.message });
+    // console.error("SendGrid error:", JSON.stringify(error.response.body, null, 2));
+    // res.status(500).json({ success: false, error: error.message });
   }
 });
 
