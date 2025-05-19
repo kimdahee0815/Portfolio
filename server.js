@@ -46,7 +46,7 @@ app.post('/send-email', async (req, res) => {
   // };
 
   try {
-    enveloop.sendMessage({
+    await enveloop.sendMessage({
       html: `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 10px;">
       <h2 style="color: #333;">📬 New Message from <strong>${name}</strong></h2>
@@ -65,17 +65,13 @@ app.post('/send-email', async (req, res) => {
       from: email,
       subject: `📬 New Message from ${name} - My Portfolio`,
     })
-    .then(res => {
-      console.log(res);
-      res.status(200).json({ success: true });
-    })
-    .catch(err => {
-      console.log(err);
-       res.status(500).json({ success: false, error: error.message });
-    })
+    console.log(res);
+    res.status(200).json({ success: true });
     // await sgMail.send(msg);
     // res.status(200).json({ success: true });
   } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, error: error.message });
     // console.error("SendGrid error:", JSON.stringify(error.response.body, null, 2));
     // res.status(500).json({ success: false, error: error.message });
   }
