@@ -55,15 +55,15 @@ app.post('/send-email', async (req, res) => {
         "subject": `📬 New Message from ${name} - My Portfolio`
       }
     }
-    await enveloop.sendMessage({
-      "to": "kimdahee0815@gmail.com",
-      "template": "hello",
-      "templateVariables": {
-        "message": message,
-        "name": name,
-        "subject": `📬 New Message from ${name} - My Portfolio`
-      }
-    })
+    // await enveloop.sendMessage({
+    //   "to": "kimdahee0815@gmail.com",
+    //   "template": "hello",
+    //   "templateVariables": {
+    //     "message": message,
+    //     "name": name,
+    //     "subject": `📬 New Message from ${name} - My Portfolio`
+    //   }
+    // })
     await fetch("https://api.enveloop.com/messages", {
       method: "POST",
       body: JSON.stringify(data),
