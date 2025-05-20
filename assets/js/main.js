@@ -566,4 +566,26 @@ $(document).ready(function () {
   setupSwipeSection("#three");
   setupSwipeSection("#two");
 });
+$(window).on("scroll", function () {
+  const scrollTop = $(window).scrollTop();
+  const windowHeight = $(window).height();
+
+  ["#one", "#two", "#three"].forEach(function (id) {
+    const $section = $(id);
+    const $arrow = $section.find(".arrow-toggle");
+    const $overlay = $section.find(".white-overlay");
+
+    const oneTop = $section.offset().top;
+    const oneBottom = oneTop + $section.outerHeight();
+
+    const isOutOfView =
+      scrollTop > oneBottom || scrollTop + windowHeight < oneTop + 100;
+
+    if (isOutOfView && $section.hasClass("show-text")) {
+      $section.removeClass("show-text");
+      $arrow.show();
+      $overlay.css("opacity", 1);
+    }
+  });
+});
 })(jQuery);
