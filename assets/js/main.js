@@ -275,14 +275,15 @@
 			});
 
 			$(window).on('scroll', function () {
-				var pixels = 800; 
-				var fadeOutPixels = 900;
-				if ($(window).scrollTop() > pixels) { 
-					$('#header').fadeIn();
-				}
-				else if ($(window).scrollTop() <= fadeOutPixels) { 
-					$('#header').fadeOut(50);
-				}
+				const sectionTop = $('#three').offset().top;
+  			const scrollTop = $(window).scrollTop();
+  			const header = $('#header');
+
+  			if (scrollTop >= sectionTop) {
+    			header.fadeIn();
+  			} else {
+    			header.fadeOut(100);
+  			}
 			});
 
 			$(document).on('click', '.project-link', function(e) {
