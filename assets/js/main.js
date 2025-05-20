@@ -352,4 +352,222 @@ $("#closeDemoModal").on("click", function () {
 			});
 		});
 
+	$(document).ready(function () {
+  	  const $arrow = $("#one .arrow-toggle");
+  		const $section = $("#one");
+  		const $overlay = $("#one .white-overlay"); 
+  		let showText = false;
+
+			$arrow.on("click", function () {
+  			showText = true;
+  			$section.addClass("show-text");
+  			$arrow.hide();
+  			$overlay.css("opacity", 0);
+			});
+
+			$section.on("mouseover", function () {
+  			if (showText) {
+    			$section.css("cursor", "pointer");
+					$overlay.css("opacity", 0.2);
+  			}
+			});
+			$section.on("mouseleave", function () {
+  			if (showText) {
+    			$section.css("cursor", "pointer");
+					$overlay.css("opacity", 0);
+  			}
+			});
+
+  	//Mobile Touch
+  	let touchStartX = 0;
+  	let touchEndX = 0;
+
+  	$section.on("touchstart", function (e) {
+    	touchStartX = e.originalEvent.touches[0].clientX;
+			$overlay.css("opacity", 1);
+  	});
+
+  	$section.on("touchend", function (e) {
+    	touchEndX = e.originalEvent.changedTouches[0].clientX;
+    	handleSwipe(touchEndX - touchStartX);
+  	});
+
+  	//Desktop mouse
+		let didDrag = false; 
+		let isDragging = false;
+
+	$section.on("mousedown", function (e) {
+  	isDragging = true;
+  	mouseStartX = e.clientX;
+  	didDrag = false; 
+  	$overlay.css("opacity", 1);
+	});
+
+	$(document).on("mousemove", function (e) {
+  	if (isDragging) {
+    	didDrag = true; 
+  	}
+	});
+
+	$(document).on("mouseup", function (e) {
+  	if (isDragging) {
+    	isDragging = false;
+    	const deltaX = e.clientX - mouseStartX;
+
+    	if (Math.abs(deltaX) > 5) {
+      	handleSwipe(deltaX);
+    	}
+  	}
+		});
+
+	$section.on("click", function (e) {
+		if (didDrag) return;
+  	if ($(e.target).closest(".arrow-toggle").length > 0) return;
+
+  	if ($section.hasClass("show-text")) {
+    	showText = false;
+    	$section.removeClass("show-text");
+    	$arrow.show();
+    	$overlay.css("opacity", 1);
+  	}
+	});
+
+  function handleSwipe(deltaX) {
+    const threshold = 50;
+
+    if (deltaX > threshold) {
+      showText = true;
+      $section.addClass("show-text");
+      $arrow.hide();
+      $overlay.css("opacity", 0);
+    } else if (deltaX < -threshold) {
+      showText = false;
+      $section.removeClass("show-text");
+      $arrow.show();
+      $overlay.css("opacity", 0);
+    }
+  }
+
+  $arrow.on("mouseenter", function () {
+    $overlay.css("opacity", 1);
+  });
+
+  $arrow.on("mouseleave", function () {
+    $overlay.css("opacity", 0);
+  });
+
+	$section.on("mouseleave", function () {
+    $overlay.css("opacity", 0);
+  });
+});
+$(document).ready(function () {
+  function setupSwipeSection(sectionId) {
+    const $arrow = $(`${sectionId} .arrow-toggle`);
+    const $section = $(sectionId);
+    const $overlay = $(`${sectionId} .white-overlay`);
+    let showText = false;
+    let isDragging = false;
+    let didDrag = false;
+    let mouseStartX = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    $arrow.on("click", function () {
+      showText = true;
+      $section.addClass("show-text");
+      $arrow.hide();
+      $overlay.css("opacity", 0);
+    });
+
+    $section.on("mouseover", function () {
+      if (showText) {
+        $section.css("cursor", "pointer");
+				$overlay.css("opacity", 0.2);
+      }
+    });
+
+    $section.on("mouseleave", function () {
+      if (showText) {
+        $section.css("cursor", "pointer");
+        $overlay.css("opacity", 0);
+      }
+    });
+
+    $section.on("touchstart", function (e) {
+      touchStartX = e.originalEvent.touches[0].clientX;
+      $overlay.css("opacity", 1);
+    });
+
+    $section.on("touchend", function (e) {
+      touchEndX = e.originalEvent.changedTouches[0].clientX;
+      handleSwipe(touchEndX - touchStartX);
+    });
+
+    $section.on("mousedown", function (e) {
+      isDragging = true;
+      mouseStartX = e.clientX;
+      didDrag = false;
+      $overlay.css("opacity", 1);
+    });
+
+    $(document).on("mousemove", function (e) {
+      if (isDragging) {
+        didDrag = true;
+      }
+    });
+
+    $(document).on("mouseup", function (e) {
+      if (isDragging) {
+        isDragging = false;
+        const deltaX = e.clientX - mouseStartX;
+        if (Math.abs(deltaX) > 5) {
+          handleSwipe(deltaX);
+        }
+      }
+    });
+
+    $section.on("click", function (e) {
+      if (didDrag) return;
+      if ($(e.target).closest(".arrow-toggle").length > 0) return;
+
+      if ($section.hasClass("show-text")) {
+        showText = false;
+        $section.removeClass("show-text");
+        $arrow.show();
+        $overlay.css("opacity", 1);
+      }
+    });
+
+    function handleSwipe(deltaX) {
+      const threshold = 50;
+
+      if (deltaX < threshold) {
+        showText = true;
+        $section.addClass("show-text");
+        $arrow.hide();
+        $overlay.css("opacity", 0);
+      } else if (deltaX > -threshold) {
+        showText = false;
+        $section.removeClass("show-text");
+        $arrow.show();
+        $overlay.css("opacity", 0);
+      }
+    }
+
+    $arrow.on("mouseenter", function () {
+      $overlay.css("opacity", 1);
+    });
+
+    $arrow.on("mouseleave", function () {
+      $overlay.css("opacity", 0);
+    });
+
+    $section.on("mouseleave", function () {
+      $overlay.css("opacity", 0);
+    });
+  }
+
+  setupSwipeSection("#three");
+  setupSwipeSection("#two");
+});
 })(jQuery);

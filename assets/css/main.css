@@ -598,7 +598,7 @@ input, select, textarea {
 			}
 		}
 
-		@media screen and (max-width: 846px) {
+		@media screen and (max-width: 943px) {
 
 			body, input, textarea, select {
 				font-size: 1rem;
@@ -625,10 +625,14 @@ input, select, textarea {
 		letter-spacing: -0.05em;
 	}
 
-	@media screen and (max-width: 846px) {
+	@media screen and (max-width: 943px) {
 
 		h2 {
-			font-size: 1.5em;
+			font-size: 2em;
+		}
+		.content{
+			font-size: 1.3em;
+			line-height: 1.8em;
 		}
 
 	}
@@ -693,7 +697,7 @@ input, select, textarea {
 			padding: 3em 2.5em 2em 2.5em;
 		}
 
-		@media screen and (max-width: 846px) {
+		@media screen and (max-width: 943px) {
 
 			.box {
 				padding: 1em;
@@ -1487,7 +1491,7 @@ input, select, textarea {
 			opacity: 1.0 !important;
 		}
 
-		@media screen and (max-width: 846px) {
+		@media screen and (max-width: 943px) {
 
 			.poptrox-popup .nav-next:before,
 			.poptrox-popup .nav-previous:before {
@@ -1997,7 +2001,7 @@ input, select, textarea {
 						outline: 0;
 					}
 
-		@media screen and (max-width: 846px) {
+		@media screen and (max-width: 943px) {
 
 			#header {
 				height: 2.5em;
@@ -2014,7 +2018,7 @@ input, select, textarea {
 				}
 
 					#header h1 a {
-						font-size: 1em;
+						font-size: 2em;
 					}
 
 				#header nav {
@@ -2030,7 +2034,7 @@ input, select, textarea {
 		animation: gradientAnimation 6s ease infinite;
 	}
 
-		@media screen and (max-width: 846px) {
+		@media screen and (max-width: 943px) {
 
 			body {
 				padding-top: 2.5em;
@@ -2199,22 +2203,6 @@ input, select, textarea {
 			background-attachment: scroll !important;
 		}
 
-		@media screen and (max-width: 1400px) {
-
-			.main.style2 .content {
-				width: 55%;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			.main.style2 .content {
-				width: 50%;
-			}
-
-		}
-
 		@media screen and (max-width: 1100px) {
 
 			.main.style2 .content {
@@ -2223,12 +2211,129 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 846px) {
+		@media (min-width: 943px) {
+  		#one .arrow-toggle,
+			#two .arrow-toggle,
+			#three .arrow-toggle {
+    		display: none;
+  		}
+		}
 
-			.main > .content br {
-				display: none;
+		@media screen and (max-width: 943px) {
+			#two .content,
+			#three .content {
+    		position: absolute;
+    		top: 0;
+    		left: 100%;
+    		width: 100%;
+    		height: 100%;
+    		background: white;
+    		color: black;
+    		padding: 2em;
+    		overflow-y: auto;
+    		z-index: 1;
+    		transition: left 0.5s ease-in-out;
+  		}
+
+			#one .content {
+    		position: absolute;
+    		top: 0;
+    		right: 100%;
+    		width: 100%;
+    		height: 100%;
+    		background: white;
+    		color: black;
+    		padding: 2em;
+    		overflow-y: auto;
+    		z-index: 1;
+    		transition: right 0.5s ease-in-out;
+  		}
+
+			#two.show-text .content,
+  		#three.show-text .content{
+    		left: 0;
+  		}
+			#one.show-text .content{
+				right: 0;
 			}
 
+		#one .white-overlay,
+		#two .white-overlay,
+		#three .white-overlay{
+   		position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  		background: rgba(33, 24, 24, 0.2); 
+  		opacity: 0;
+  		transition: opacity 0.3s ease-in-out;
+  		pointer-events: none;
+  		z-index: 2; 
+		}
+
+		@keyframes arrowPointing {
+  		0% {
+    		transform: translateY(-50%) translateX(0);
+  		}
+  		50% {
+    		transform: translateY(-50%) translateX(40px); 
+  		}
+  		100% {
+    		transform: translateY(-50%) translateX(0);
+  		}
+		}
+
+		#two .arrow-toggle,
+		#three .arrow-toggle {
+  		position: absolute;
+  		top: 50%;
+  		right: 5%;
+  		transform: translateY(-50%);
+  		font-size: 10rem;
+  		font-weight: bold;
+  		color: #fff;
+  		opacity: 0.7;
+  		cursor: pointer;
+  		z-index: 2;
+  		transition: all 0.3s ease;
+  		animation: arrowPointing 1.2s ease-in-out infinite;
+			display: block; 
+		}
+
+		#one .arrow-toggle {
+  		position: absolute;
+  		top: 50%;
+  		left: 5%;
+  		transform: translateY(-50%);
+  		font-size: 10rem;
+  		font-weight: bold;
+  		color: #fff;
+  		opacity: 0.7;
+  		cursor: pointer;
+  		z-index: 2;
+  		transition: all 0.3s ease;
+  		animation: arrowPointing 1.2s ease-in-out infinite;
+			display: block; 
+		}
+
+		#one .arrow-toggle:hover + .white-overlay,
+		#two .arrow-toggle:hover + .white-overlay,
+		#three .arrow-toggle:hover + .white-overlay {
+  		opacity: 1;
+		}
+
+		#one .arrow-toggle:hover,
+		#two .arrow-toggle:hover,
+		#three .arrow-toggle:hover {
+  		transform: translateY(-50%) scale(5);
+  		color: white;
+  		text-shadow: 0 0 10px rgba(0,0,0,0.3);
+			cursor: pointer;
+  		opacity: 0.8;
+  		z-index: 1000;
+			animation: arrowPointing 1.2s ease-in-out infinite;
+		}
 			.main.fullscreen {
 				height: auto !important;
 			}
@@ -2345,7 +2450,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 846px) {
+		@media screen and (max-width: 943px) {
 
 			#footer ul.menu li {
 				border-left: none;
@@ -2406,6 +2511,7 @@ input, select, textarea {
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: repeat, no-repeat;
+		background-position: 5% center;
 	}
 
 	.video-wrapper {
@@ -2455,7 +2561,7 @@ input, select, textarea {
 			transform: translateY(100%);
 		}
 
-		@media screen and (max-width: 846px) {
+		@media screen and (max-width: 943px) {
 
 			#contact .box {
 				padding: 1.5em 1.5em 2em 1.5em;
