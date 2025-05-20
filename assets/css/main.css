@@ -2425,6 +2425,10 @@ input, select, textarea {
 					font-size: 3em;
 				}
 
+				 .mobile-br {
+    			display: block;
+  			}
+
 			.main.style2 {
 				padding: 6em 15px 6em 15px;
 			}
