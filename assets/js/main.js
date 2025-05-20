@@ -397,7 +397,10 @@ $("#closeDemoModal").on("click", function () {
   		const deltaY = Math.abs(touchEndY - touchStartY);
 
   		// Scroll (neglected)
-  		if (deltaY > Math.abs(deltaX)) return;
+  		if (deltaY > Math.abs(deltaX)) {
+				$overlay.css("opacity", 0);
+				return;
+			}
 
   		handleSwipe(deltaX);
 		})
@@ -515,7 +518,10 @@ $(document).ready(function () {
   		const deltaX = touchEndX - touchStartX;
   		const deltaY = Math.abs(touchEndY - touchStartY);
 			//scroll (negelected)
-  		if (deltaY > Math.abs(deltaX)) return;
+  		if (deltaY > Math.abs(deltaX)) {
+				$overlay.css("opacity", 0);
+				return;
+			}
 
   		handleSwipe(deltaX);
 		});
