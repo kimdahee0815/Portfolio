@@ -541,7 +541,20 @@ input, select, textarea {
     		min-height: 100vh;
     		object-fit: cover;
     		width: 100vw;
-    		object-position: left center;
+    		object-position: 10% center;
+			}
+		}
+
+		@media screen and (max-width: 321px) {
+			.video-wrapper .bg-video {
+    		 position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		height: 100%;
+    		min-height: 100vh;
+    		object-fit: cover;
+    		width: 170vw;
+    		object-position: 5% center;
 			}
 		}
 
@@ -2499,12 +2512,11 @@ input, select, textarea {
 	}
 
 /* One */
-
 	#one {
 		background: url("images/fulls/profile1.png"), url("../../images/fulls/profile1.png");
 		background-size: contain, cover;
 		background-attachment: fixed;
-		background-position: top center, top right;
+		background-position: right center, 93% center;
 		background-repeat: repeat, no-repeat;
 	}
 
@@ -2515,7 +2527,7 @@ input, select, textarea {
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: repeat, no-repeat;
-		background-position: 5% center;
+		background-position: 20% center;
 	}
 
 	.video-wrapper {
