@@ -379,17 +379,27 @@ $("#closeDemoModal").on("click", function () {
   	//Mobile Touch
   	let touchStartX = 0;
   	let touchEndX = 0;
+		let touchStartY = 0;
+		let touchEndY = 0;
+  	
+		$section.on("touchstart", function (e) {
+  		touchStartX = e.originalEvent.touches[0].clientX;
+  		touchStartY = e.originalEvent.touches[0].clientY;
+  		$overlay.css("opacity", 1);
+			});
 
-  	$section.on("touchstart", function (e) {
-    	touchStartX = e.originalEvent.touches[0].clientX;
-			$overlay.css("opacity", 1);
-  	});
+		$section.on("touchend", function (e) {
+  		touchEndX = e.originalEvent.changedTouches[0].clientX;
+  		touchEndY = e.originalEvent.changedTouches[0].clientY;
 
-  	$section.on("touchend", function (e) {
-    	touchEndX = e.originalEvent.changedTouches[0].clientX;
-    	handleSwipe(touchEndX - touchStartX);
-  	});
+  		const deltaX = touchEndX - touchStartX;
+  		const deltaY = Math.abs(touchEndY - touchStartY);
 
+  		// Scroll (neglected)
+  		if (deltaY > Math.abs(deltaX)) return;
+
+  		handleSwipe(deltaX);
+		})
   	//Desktop mouse
 		let didDrag = false; 
 		let isDragging = false;
@@ -468,7 +478,9 @@ $(document).ready(function () {
     let didDrag = false;
     let mouseStartX = 0;
     let touchStartX = 0;
-    let touchEndX = 0;
+		let touchEndX = 0;
+		let touchStartY = 0;
+		let touchEndY = 0;
 
     $arrow.on("click", function () {
       showText = true;
@@ -490,15 +502,22 @@ $(document).ready(function () {
     });
 
     $section.on("touchstart", function (e) {
-      touchStartX = e.originalEvent.touches[0].clientX;
-      $overlay.css("opacity", 1);
-    });
+  		touchStartX = e.originalEvent.touches[0].clientX;
+  		touchStartY = e.originalEvent.touches[0].clientY;
+  		$overlay.css("opacity", 1);
+		});
 
-    $section.on("touchend", function (e) {
-      touchEndX = e.originalEvent.changedTouches[0].clientX;
-      handleSwipe(touchEndX - touchStartX);
-    });
+		$section.on("touchend", function (e) {
+  		touchEndX = e.originalEvent.changedTouches[0].clientX;
+  		touchEndY = e.originalEvent.changedTouches[0].clientY;
 
+  		const deltaX = touchEndX - touchStartX;
+  		const deltaY = Math.abs(touchEndY - touchStartY);
+			//scroll (negelected)
+  		if (deltaY > Math.abs(deltaX)) return;
+
+  		handleSwipe(deltaX);
+		});
     $section.on("mousedown", function (e) {
       isDragging = true;
       mouseStartX = e.clientX;
