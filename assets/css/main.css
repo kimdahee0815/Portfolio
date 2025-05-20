@@ -1287,15 +1287,10 @@ input, select, textarea {
 			line-height: 2em;
 			text-align: center;
 			border: 0;
-			color: #333;
+			color: white;
 		}
 
 /* Sections/Article */
-	@keyframes gradientAnimation {
-		0% { background-position: 0% 50%; }
-		50% { background-position: 100% 50%; }
-		100% { background-position: 0% 50%; }
-	}
 
 	header {
 		margin-bottom: 1em;
@@ -2046,12 +2041,13 @@ input, select, textarea {
 
 					#header nav ul li a {
 						display: block;
-						color: inherit;
+						color: white;
 						text-decoration: none;
 						height: 3em;
 						line-height: 3em;
 						padding: 0 0.5em 0 0.5em;
 						outline: 0;
+						font-weight: bold;
 					}
 
 		@media screen and (max-width: 943px) {
@@ -2344,34 +2340,44 @@ input, select, textarea {
 		#two .arrow-toggle,
 		#three .arrow-toggle {
   		position: absolute;
+			line-height: 2;
   		top: 50%;
-  		right: 5%;
+  		right: 7%;
   		transform: translateY(-50%);
-  		font-size: 10rem;
+  		font-size: 13rem;
   		font-weight: bold;
-  		color: #fff;
-  		opacity: 0.7;
+  		background: linear-gradient(270deg, #ff7e5f, #feb47b, #6daf22, #86a8e7, #7f7fd5);
+    	-webkit-background-clip: text;
+    	background-clip: text;
+    	-webkit-text-fill-color: transparent;
+			background-size: 400% 400%;
+    	animation: gradientAnimation 6s ease infinite, arrowPointing 1.2s ease-in-out infinite;
+    	opacity: 1;
+    	transition: opacity 0.3s ease;
   		cursor: pointer;
   		z-index: 2;
   		transition: all 0.3s ease;
-  		animation: arrowPointing 1.2s ease-in-out infinite;
-			display: block; 
 		}
 
 		#one .arrow-toggle {
   		position: absolute;
+			line-height: 2;
   		top: 50%;
-  		left: 5%;
+  		left: 7%;
   		transform: translateY(-50%);
-  		font-size: 10rem;
+  		font-size: 13rem;
   		font-weight: bold;
-  		color: #fff;
-  		opacity: 0.7;
-  		cursor: pointer;
+  		background: linear-gradient(270deg, #ff7e5f, #feb47b, #6daf22, #86a8e7, #7f7fd5);
+    	-webkit-background-clip: text;
+    	background-clip: text;
+    	-webkit-text-fill-color: transparent;
+			background-size: 400% 400%;
+    	animation: gradientAnimation 6s ease infinite, arrowPointing 1.2s ease-in-out infinite;
+    	opacity: 1;
+    	transition: opacity 0.3s ease;
+			cursor: pointer;
   		z-index: 2;
   		transition: all 0.3s ease;
-  		animation: arrowPointing 1.2s ease-in-out infinite;
-			display: block; 
 		}
 
 		#one .arrow-toggle:hover + .white-overlay,
@@ -2383,14 +2389,30 @@ input, select, textarea {
 		#one .arrow-toggle:hover,
 		#two .arrow-toggle:hover,
 		#three .arrow-toggle:hover {
-  		transform: translateY(-50%) scale(5);
-  		color: white;
-  		text-shadow: 0 0 10px rgba(0,0,0,0.3);
-			cursor: pointer;
-  		opacity: 0.8;
-  		z-index: 1000;
-			animation: arrowPointing 1.2s ease-in-out infinite;
+  	 transform: translateY(-50%) scale(5) rotate(10deg);
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 1000;
+	background-size: 400% 400%;
+  animation: gradientAnimation 6s ease infinite, arrowPointing 1.2s ease-in-out infinite, glowPulse 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
 		}
+
+			@keyframes gradientAnimation {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
+
+		@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+  }
+}
 			.main.fullscreen {
 				height: auto !important;
 			}
