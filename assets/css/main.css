@@ -1998,9 +1998,9 @@ input, select, textarea {
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 		display: flex;
-  justify-content: space-between; /* 왼쪽-오른쪽 정렬 */
-  align-items: center; /* 세로 가운데 정렬 */
-  padding: 1rem 2rem; /* 여백 조절 */
+  	justify-content: space-between; 
+  	align-items: center; 
+  	padding: 1rem 2rem; 
 	}
 
 	.hidden{
@@ -2904,3 +2904,9 @@ input, select, textarea {
 	font-size: 1.2rem;
 	margin-right: 0.5rem;
 }
+
+@keyframes gradientAnimation {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
