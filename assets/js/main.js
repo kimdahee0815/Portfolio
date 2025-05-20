@@ -367,13 +367,11 @@ $("#closeDemoModal").on("click", function () {
 
 			$section.on("mouseover", function () {
   			if (showText) {
-    			$section.css("cursor", "pointer");
 					$overlay.css("opacity", 0.2);
   			}
 			});
 			$section.on("mouseleave", function () {
   			if (showText) {
-    			$section.css("cursor", "pointer");
 					$overlay.css("opacity", 0);
   			}
 			});
@@ -481,14 +479,12 @@ $(document).ready(function () {
 
     $section.on("mouseover", function () {
       if (showText) {
-        $section.css("cursor", "pointer");
 				$overlay.css("opacity", 0.2);
       }
     });
 
     $section.on("mouseleave", function () {
       if (showText) {
-        $section.css("cursor", "pointer");
         $overlay.css("opacity", 0);
       }
     });

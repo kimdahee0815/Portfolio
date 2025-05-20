@@ -2233,6 +2233,7 @@ input, select, textarea {
     		overflow-y: auto;
     		z-index: 1;
     		transition: left 0.5s ease-in-out;
+				cursor: default;
   		}
 
 			#one .content {
@@ -2247,14 +2248,17 @@ input, select, textarea {
     		overflow-y: auto;
     		z-index: 1;
     		transition: right 0.5s ease-in-out;
+				cursor: default;
   		}
 
 			#two.show-text .content,
   		#three.show-text .content{
     		left: 0;
+				cursor: pointer;
   		}
 			#one.show-text .content{
 				right: 0;
+				cursor: pointer;
 			}
 
 		#one .white-overlay,
