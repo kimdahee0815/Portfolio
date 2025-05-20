@@ -368,7 +368,7 @@ $("#closeDemoModal").on("click", function () {
 
 			$section.on("mouseover", function () {
   			if (showText) {
-					$overlay.css("opacity", 0.2);
+					$overlay.css("opacity", 0.1);
   			}
 			});
 			$section.on("mouseleave", function () {
@@ -492,7 +492,7 @@ $(document).ready(function () {
 
     $section.on("mouseover", function () {
       if (showText) {
-				$overlay.css("opacity", 0.2);
+				$overlay.css("opacity", 0.1);
       }
     });
 
