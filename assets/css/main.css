@@ -2516,7 +2516,7 @@ input, select, textarea {
 		background: url("images/fulls/profile1.png"), url("../../images/fulls/profile1.png");
 		background-size: contain, cover;
 		background-attachment: fixed;
-		background-position: right center, 93% center;
+		background-position: right center, 90% center;
 		background-repeat: repeat, no-repeat;
 	}
 
