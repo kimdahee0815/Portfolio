@@ -386,7 +386,6 @@ $("#closeDemoModal").on("click", function () {
 		$section.on("touchstart", function (e) {
   		touchStartX = e.originalEvent.touches[0].clientX;
   		touchStartY = e.originalEvent.touches[0].clientY;
-  		$overlay.css("opacity", 1);
 			});
 
 		$section.on("touchend", function (e) {
@@ -402,6 +401,7 @@ $("#closeDemoModal").on("click", function () {
 				return;
 			}
 
+			$overlay.css("opacity", 1);
   		handleSwipe(deltaX);
 		})
   	//Desktop mouse
@@ -508,7 +508,6 @@ $(document).ready(function () {
     $section.on("touchstart", function (e) {
   		touchStartX = e.originalEvent.touches[0].clientX;
   		touchStartY = e.originalEvent.touches[0].clientY;
-  		$overlay.css("opacity", 1);
 		});
 
 		$section.on("touchend", function (e) {
@@ -523,6 +522,7 @@ $(document).ready(function () {
 				return;
 			}
 
+			$overlay.css("opacity", 1);
   		handleSwipe(deltaX);
 		});
     $section.on("mousedown", function (e) {
