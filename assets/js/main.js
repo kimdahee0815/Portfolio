@@ -328,6 +328,7 @@
 		});
 
 	$(document).ready(function () {
+			$('#header').hide();
   	  const $arrow = $("#one .arrow-toggle");
   		const $section = $("#one");
   		const $overlay = $("#one .white-overlay"); 
