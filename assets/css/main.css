@@ -2960,10 +2960,10 @@ input, select, textarea {
 
 	@media screen and (max-width: 944px) {
 
-			 #header {
+	#header {
     height: 2.5em !important;
     line-height: 2.5em !important;
-    display: flex !important;
+    display: none;
   }
 
   ul.headericons {

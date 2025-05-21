@@ -299,6 +299,17 @@
 				e.stopPropagation(); // Stop event bubbling
 		});
 
+		function updateHeaderDisplay() {
+  		if ($(window).width() <= 943) {
+    		document.getElementById('header').style.setProperty('display', 'flex', 'important');
+  		} else {
+    		document.getElementById('header').style.removeProperty('display');
+  		}
+		}
+
+		$(window).on('resize', updateHeaderDisplay);
+		$(document).ready(updateHeaderDisplay);
+
 		$('#contact-form').on('submit', function (e) {
 			e.preventDefault();
 		
@@ -328,7 +339,6 @@
 		});
 
 	$(document).ready(function () {
-			$('#header').hide();
   	  const $arrow = $("#one .arrow-toggle");
   		const $section = $("#one");
   		const $overlay = $("#one .white-overlay"); 
