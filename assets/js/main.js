@@ -115,13 +115,22 @@
 			const closeBtn = document.getElementById("closeDemoModal");
 	
 			document.querySelectorAll(".open-demo-modal").forEach(btn => {
-				btn.addEventListener("click", function () {
+				btn.addEventListener("click", function (e) {
+					e.preventDefault();
+					
 					const mediaSrc = btn.getAttribute("data-demo");
 					const mediaType = btn.getAttribute("data-type") || "image";
 					const projectTitle = btn.getAttribute("data-title") || "";
 					const projectDesc = btn.getAttribute("data-desc") || "";
-	
-					title.textContent = projectTitle;
+					const projectLink = btn.getAttribute("data-link") || null;
+
+					if (projectLink) {
+						title.innerHTML = `<a class="project-link" href="${projectLink}" target="_blank" rel="noopener" style="color: rgb(230, 148, 72); text-decoration: none;">${projectTitle}
+						<img src="images/click.ico" width="45" height="45" alt="Click"/>
+						</a>`;
+					} else {
+						title.textContent = projectTitle;
+					}
 					desc.innerHTML = projectDesc;
 	
 					if (mediaType === "video") {
@@ -289,41 +298,6 @@
 			$(document).on('click', '.project-link', function(e) {
 				e.stopPropagation(); // Stop event bubbling
 		});
-
-	$(document).on("click", ".open-demo-modal", function () {
-  const demoUrl = $(this).data("demo");
-  const type = $(this).data("type");
-  const title = $(this).data("title");
-  const desc = $(this).data("desc");
-
-  $("#demoTitle").html(title);
-  $("#demoDescription").html(desc);
-
-  $("#demoModalVideo").hide();
-  $("#demoModalImg").hide();
-
-  if (type === "video") {
-    const $video = $("#demoModalVideo");
-    $video.attr("src", demoUrl);
-    $video.show();
-    $video.get(0).playbackRate = 2.0; 
-  } else if (type === "image") {
-    $("#demoModalImg").attr("src", demoUrl).show();
-  }
-
-  $("#demoModal").fadeIn();
-});
-
-$("#closeDemoModal").on("click", function () {
-  $("#demoModal").fadeOut();
-
-  const video = $("#demoModalVideo").get(0);
-  video.pause();
-  video.currentTime = 0;
-  $("#demoModalVideo").attr("src", "").hide();
-
-  $("#demoModalImg").attr("src", "").hide();
-});
 
 		$('#contact-form').on('submit', function (e) {
 			e.preventDefault();
