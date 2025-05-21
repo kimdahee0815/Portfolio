@@ -1257,7 +1257,6 @@ input, select, textarea {
 			cursor: default;
 			margin-left: 8rem;
 			margin-bottom: unset;
-      margin-top: -0.8rem;
 		}
 
 		@media screen and (max-width: 1920px) {
@@ -1265,7 +1264,6 @@ input, select, textarea {
 				cursor: default;
 		    margin-bottom: unset;
 				margin-left: 7rem;
-				margin-top: -0.8rem;
 			}
 		}
 
@@ -1274,7 +1272,6 @@ input, select, textarea {
 				cursor: default;
 		    margin-bottom: unset;
 				margin-left: 6.5rem;
-				margin-top: -0.8rem;
 			}
 		}
 
@@ -1283,7 +1280,6 @@ input, select, textarea {
 				cursor: default;
 		    margin-bottom: unset;
 				margin-left: 5.5rem;
-				margin-top: -0.8rem;
 			}
 		}
 
@@ -1292,7 +1288,6 @@ input, select, textarea {
 				cursor: default;
 		    margin-bottom: unset;
 				margin-left: 4.8rem;
-				margin-top: -0.9rem;
 			}
 		}
 
@@ -2963,7 +2958,6 @@ input, select, textarea {
 	#header {
     height: 2.5em !important;
     line-height: 2.5em !important;
-    display: none;
   }
 
   ul.headericons {

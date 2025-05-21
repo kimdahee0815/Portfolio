@@ -299,16 +299,36 @@
 				e.stopPropagation(); // Stop event bubbling
 		});
 
-		function updateHeaderDisplay() {
-  		if ($(window).width() <= 943) {
-    		document.getElementById('header').style.setProperty('display', 'flex', 'important');
-  		} else {
-    		document.getElementById('header').style.removeProperty('display');
-  		}
-		}
+function updateHeaderVisibility() {
+  const scrollTop = $(window).scrollTop();
+  const sectionTop = $('#three').offset().top;
+  const header = document.getElementById('header');
+  const windowWidth = $(window).width();
 
-		$(window).on('resize', updateHeaderDisplay);
-		$(document).ready(updateHeaderDisplay);
+  if (scrollTop >= sectionTop) {
+    // #three 섹션 아래일 때
+    if (windowWidth <= 943) {
+      header.style.setProperty('display', 'flex', 'important');
+    } else {
+      $('#header').stop(true, true).fadeIn();
+    }
+  } else {
+    // #three 섹션 위일 때
+    if (windowWidth <= 943) {
+      header.style.setProperty('display', 'none', 'important');
+    } else {
+      $('#header').stop(true, true).fadeOut();
+    }
+  }
+}
+
+$(document).ready(function () {
+  updateHeaderVisibility();
+});
+
+$(window).on('scroll resize', function () {
+  updateHeaderVisibility();
+});
 
 		$('#contact-form').on('submit', function (e) {
 			e.preventDefault();
