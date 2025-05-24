@@ -2012,7 +2012,7 @@ input, select, textarea {
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
-		display: flex;
+		display: flex !important;
   	justify-content: space-between; 
   	align-items: center; 
   	padding: 1rem 2rem; 
