@@ -310,6 +310,7 @@ function updateHeaderVisibility() {
     if (windowWidth <= 943) {
       header.style.setProperty('display', 'flex', 'important');
     } else {
+			header.style.setProperty('display', 'flex', 'important');
       $('#header').stop(true, true).fadeIn();
     }
   } else {
