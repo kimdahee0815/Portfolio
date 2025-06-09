@@ -164,6 +164,27 @@
 				}
 			});
 		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.01, 
+        rootMargin: '0px 0px -90px 0px' 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+            } else{
+							entry.target.classList.remove('fade-in');
+						}
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.divider').forEach(divider => {
+        observer.observe(divider);
+    });
+});
 	// Section transitions.
 		if (browser.canUse('transition')) {
 

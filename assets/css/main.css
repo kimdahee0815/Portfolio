@@ -2776,7 +2776,7 @@ input, select, textarea {
 		height: 100%;
 }
 
-.project-h3 a {
+.project-h3 a, span {
     position: relative;
 		display: inline-flex;
     align-items: center;
@@ -2985,3 +2985,158 @@ input, select, textarea {
 				}
 
 		}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.blog-card-link:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card {
+   	background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+		box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+		cursor: pointer;
+}
+
+.blog-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-img img {
+    transform: scale(1.1);
+		cursor: pointer;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content span {
+  font-size: 2rem;
+}
+
+.blog-card .blog-content {
+	transition: all 0.3s ease;
+}
+
+.blog-card .blog-content:hover{
+	opacity: 0.8;
+	transform: translateY(-10px);
+}
+
+.blog-excerpt {
+    color: #666;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 736px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.divider {
+    position: relative;
+    width: 100%;
+    background: white;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.divider.fade-in {
+		background: white;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #6daf22 20%,
+        #a8d45a 50%,
+        #6daf22 80%,
+        transparent
+    );
+    border-radius: 2px;
+    z-index: 1;
+    transform: scaleX(0);
+    transition: transform 1s ease-out 0.3s;
+}
+
+.divider.fade-in::before {
+    transform: scaleX(1);
+}
+
+.divider::after {
+    content: '✦';
+    position: relative;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #6daf22;
+    box-shadow: 0 0 15px rgba(109, 175, 34, 0.2);
+    z-index: 2;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.6s;
+}
+
+.divider.fade-in::after {
+    transform: scale(1);
+		background: white;
+    animation: dividerPulse 2s infinite ease-in-out 1.2s;
+}
+
+@keyframes dividerPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(109, 175, 34, 0.2);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px rgba(109, 175, 34, 0.4);
+    }
+}
