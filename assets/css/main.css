@@ -1036,10 +1036,18 @@ textarea {
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -moz-transition:
+        border-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+    -webkit-transition:
+        border-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+    -ms-transition:
+        border-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+    transition:
+        border-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
     color: #39454b;
     display: block;
     width: 100%;
@@ -1697,10 +1705,18 @@ body.is-touch .poptrox-popup .closer {
 }
 
 .gallery article {
-    -moz-transition: -moz-transform 1s ease, opacity 1s ease;
-    -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-    -ms-transition: -ms-transform 1s ease, opacity 1s ease;
-    transition: transform 1s ease, opacity 1s ease;
+    -moz-transition:
+        -moz-transform 1s ease,
+        opacity 1s ease;
+    -webkit-transition:
+        -webkit-transform 1s ease,
+        opacity 1s ease;
+    -ms-transition:
+        -ms-transform 1s ease,
+        opacity 1s ease;
+    transition:
+        transform 1s ease,
+        opacity 1s ease;
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -2295,6 +2311,11 @@ body {
     transform: translateX(100%);
 }
 
+.main.style2 > .content .box {
+    width: 100%;
+    max-width: none;
+}
+
 .main.style3 {
     text-align: center;
     padding: 6em 0 6em 0;
@@ -2437,7 +2458,9 @@ body.is-touch .main {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         background-size: 400% 400%;
-        animation: gradientAnimation 6s ease infinite, arrowPointing 1.2s ease-in-out infinite;
+        animation:
+            gradientAnimation 6s ease infinite,
+            arrowPointing 1.2s ease-in-out infinite;
         opacity: 0.7;
         transition: opacity 0.3s ease;
         cursor: pointer;
@@ -2458,7 +2481,9 @@ body.is-touch .main {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         background-size: 400% 400%;
-        animation: gradientAnimation 6s ease infinite, arrowPointing 1.2s ease-in-out infinite;
+        animation:
+            gradientAnimation 6s ease infinite,
+            arrowPointing 1.2s ease-in-out infinite;
         opacity: 0.7;
         transition: opacity 0.3s ease;
         cursor: pointer;
@@ -2481,7 +2506,9 @@ body.is-touch .main {
         opacity: 1;
         z-index: 1000;
         background-size: 400% 400%;
-        animation: gradientAnimation 6s ease infinite, arrowPointing 1.2s ease-in-out infinite,
+        animation:
+            gradientAnimation 6s ease infinite,
+            arrowPointing 1.2s ease-in-out infinite,
             glowPulse 1.2s ease-in-out infinite;
         filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
     }
@@ -2646,7 +2673,9 @@ body.is-touch .main {
     z-index: 2;
     /*background-size: 256px 256px, cover;*/
     background-attachment: fixed, fixed;
-    background-position: top left, bottom center;
+    background-position:
+        top left,
+        bottom center;
     background-repeat: repeat, no-repeat;
 }
 
@@ -2670,7 +2699,9 @@ body.is-touch .main {
     background: url("images/fulls/profile1.png"), url("../../images/fulls/profile1.png");
     background-size: contain, cover;
     background-attachment: fixed;
-    background-position: right center, 90% center;
+    background-position:
+        right center,
+        90% center;
     background-repeat: repeat, no-repeat;
 }
 
@@ -2681,7 +2712,9 @@ body.is-touch .main {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: repeat, no-repeat;
-    background-position: 18% center;
+    background-position:
+        left center,
+        90% center;
 }
 
 .video-wrapper {
