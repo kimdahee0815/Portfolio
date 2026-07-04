@@ -38,14 +38,14 @@ app.post("/send-email", async (req, res) => {
         return res.status(405).json({ message: "Method not allowed" });
     }
 
+    const { name, message, email } = req.body;
+
     if (!name || !email || !message) {
         return res.status(400).json({
             success: false,
             error: "Missing fields",
         });
     }
-
-    const { name, message, email } = req.body;
 
     try {
         const data = {
