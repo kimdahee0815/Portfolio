@@ -14,7 +14,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "enveloop": "^0.2.2",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "resend": "^6.17.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
