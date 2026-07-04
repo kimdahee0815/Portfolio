@@ -3,7 +3,7 @@ const cors = require("cors");
 // const sgMail = require("@sendgrid/mail");
 // const { Enveloop } = require("enveloop");
 // const enveloop = new Enveloop({ apiKey: process.env.ENVELOOP_LIVE_API_KEY });
-import { Resend } from "resend";
+const { Resend } = require("resend");
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
