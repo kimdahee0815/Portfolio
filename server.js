@@ -3,12 +3,11 @@ const cors = require("cors");
 // const sgMail = require("@sendgrid/mail");
 // const { Enveloop } = require("enveloop");
 // const enveloop = new Enveloop({ apiKey: process.env.ENVELOOP_LIVE_API_KEY });
-const { Resend } = require("resend");
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+const nodemailer = require("nodemailer");
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 const to = process.env.EMAIL_TO || "Acme <onboarding@resend.dev>";
-const templateId = process.env.RESEND_TEMPLATE_ID || "your-template-id";
+// const templateId = process.env.RESEND_TEMPLATE_ID || "your-template-id";
 require("dotenv").config();
 
 const app = express();
@@ -22,6 +21,15 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// SMTP 설정
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL_TO,
+        pass: process.env.GOOGLE_APP_PASS,
+    },
+});
+
 app.options("/send-email", cors(corsOptions));
 app.use(express.json());
 
@@ -30,12 +38,19 @@ app.post("/send-email", async (req, res) => {
         return res.status(405).json({ message: "Method not allowed" });
     }
 
+    if (!name || !email || !message) {
+        return res.status(400).json({
+            success: false,
+            error: "Missing fields",
+        });
+    }
+
     const { name, message, email } = req.body;
 
     try {
         const data = {
-            from: email,
-            to: [to],
+            from: `"Portfolio Contact" <${email}>`,
+            to: to,
             subject: `📬 New Message from ${name} - My Portfolio`,
             html: `
               <!DOCTYPE html>
@@ -110,16 +125,14 @@ app.post("/send-email", async (req, res) => {
             `,
         };
 
-        const { data: response, error } = await resend.emails.send(data);
-
-        if (error) {
-            console.error("Resend error:", error);
-            return res.status(500).json({ success: false, error: error.message });
-        }
+        await transporter.sendMail(data, (error, info) => {
+            if (error) {
+                console.error("Email error:", error);
+                return res.status(500).json({ success: false, error: error.message });
+            }
+        });
 
         console.log("Email sent successfully!");
-        console.log("Email ID:", response?.id);
-        console.log("Template ID:", templateId);
 
         res.status(200).json({ success: true });
     } catch (error) {
