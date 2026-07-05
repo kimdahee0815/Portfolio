@@ -6,7 +6,7 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 // const resend = new Resend(process.env.RESEND_API_KEY);
 
-const to = process.env.EMAIL_TO || "Acme <onboarding@resend.dev>";
+const to = process.env.EMAIL_TO || "kimdahee0815@gmail.com";
 // const templateId = process.env.RESEND_TEMPLATE_ID || "your-template-id";
 require("dotenv").config();
 
