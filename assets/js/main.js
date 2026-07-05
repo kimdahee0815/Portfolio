@@ -152,6 +152,32 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
+        const resumeButtons = document.querySelectorAll("#resume-download-btn");
+
+        resumeButtons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const resumes = [
+                    { url: "assets/resume/DaheeKim_Resume_EN.pdf", filename: "DaheeKim_Resume_EN.pdf" },
+                    { url: "assets/resume/DaheeKim_Resume_KR.pdf", filename: "DaheeKim_Resume_KR.pdf" },
+                ];
+
+                resumes.forEach((resume, index) => {
+                    setTimeout(() => {
+                        const link = document.createElement("a");
+                        link.href = resume.url;
+                        link.download = resume.filename;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }, index * 300);
+                });
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
         const observerOptions = {
             threshold: 0.01,
             rootMargin: "0px 0px -90px 0px",
@@ -638,26 +664,6 @@
                 $arrow.show();
                 $overlay.css("opacity", 1);
             }
-        });
-    });
-
-    $(window).on("downloadBothResumes", function (event) {
-        event.preventDefault();
-
-        const resumes = [
-            { url: "assets/resume/DaheeKim_Resume_EN.pdf", filename: "DaheeKim_Resume_EN.pdf" },
-            { url: "assets/resume/DaheeKim_Resume_KR.pdf", filename: "DaheeKim_Resume_KR.pdf" },
-        ];
-
-        resumes.forEach((resume, index) => {
-            setTimeout(() => {
-                const link = document.createElement("a");
-                link.href = resume.url;
-                link.download = resume.filename;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }, index * 300);
         });
     });
 })(jQuery);
