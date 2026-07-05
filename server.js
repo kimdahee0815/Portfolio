@@ -53,75 +53,68 @@ app.post("/send-email", async (req, res) => {
             to: to,
             subject: `📬 New Message from ${name} - My Portfolio`,
             html: `
-              <!DOCTYPE html>
-              <html>
-              <head><meta charset="utf-8" /></head>
-              <body style="margin:0; padding:0; background-color:#f4f4f7; font-family:'Helvetica Neue', Arial, sans-serif;">
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
-                  <tr>
-                    <td align="center">
-                      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:20px; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,0.12);">
-                        <tr>
-                          <td style="padding:36px 40px; background: linear-gradient(120deg, #ff4d6d, #ff9a4d, #ffe14d, #4dff9e, #4dc9ff, #7a4dff, #ff4dd2);">
-                            <table role="presentation" width="100%">
-                              <tr>
-                                <td style="background:rgba(255,255,255,0.92); border-radius:14px; padding:20px 24px;">
-                                  <p style="margin:0; font-size:12px; letter-spacing:1.5px; color:#a855f7; font-weight:700; text-transform:uppercase;">Portfolio Contact</p>
-                                  <h1 style="margin:6px 0 0 0; font-size:22px; color:#1a1a1a;">📬 New Message from ${name}</h1>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding:32px 40px;">
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:14px; border:1px solid #eee; overflow:hidden;">
-                              <tr>
-                                <td style="padding:16px 20px; border-bottom:1px solid #f0f0f5; background:#fafafa;">
-                                  <p style="margin:0; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:#a3a3a3;">Name</p>
-                                  <p style="margin:4px 0 0 0; font-size:15px; color:#1a1a1a; font-weight:600;">${name}</p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td style="padding:16px 20px; border-bottom:1px solid #f0f0f5; background:#fafafa;">
-                                  <p style="margin:0; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:#a3a3a3;">Email</p>
-                                  <p style="margin:4px 0 0 0; font-size:15px;">
-                                    <a href="mailto:${email}" style="color:#7a4dff; text-decoration:none; font-weight:600;">${email}</a>
-                                  </p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td style="padding:20px; background:#fff;">
-                                  <p style="margin:0 0 8px 0; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:#a3a3a3;">Message</p>
-                                  <p style="margin:0; font-size:15px; line-height:1.7; color:#333; white-space:pre-wrap;">${message}</p>
-                                </td>
-                              </tr>
-                            </table>
-                            <table role="presentation" width="100%" style="margin-top:28px;">
-                              <tr>
-                                <td align="center">
-                                  <a href="mailto:${email}" style="display:inline-block; padding:14px 32px; border-radius:999px; background:linear-gradient(90deg, #ff4d6d, #7a4dff, #4dc9ff); color:#fff; font-size:14px; font-weight:700; text-decoration:none;">
-                                    Reply to ${name} →
-                                  </a>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding:24px 40px; text-align:center;">
-                            <p style="margin:0; font-size:12px; color:#bbb;">Sent automatically from daheekim.app contact form</p>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="height:6px; background:linear-gradient(90deg, #ff4d6d, #ff9a4d, #ffe14d, #4dff9e, #4dc9ff, #7a4dff, #ff4dd2);"></td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </body>
-              </html>
+            <!DOCTYPE html>
+            <html>
+            <head><meta charset="utf-8" /></head>
+            <body style="margin:0; padding:0; background-color:#f5f2ee;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:48px 0;">
+                <tr>
+                  <td align="center">
+                    <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="background:#fffdfb; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,0.06); font-family:Georgia, 'Times New Roman', serif;">
+
+                      <!-- Pastel gradient header -->
+                      <tr>
+                        <td style="padding:40px 44px 32px 44px; background:linear-gradient(135deg, #e8e0f5 0%, #f5e0e8 50%, #fbe8d9 100%);">
+                          <p style="margin:0 0 8px 0; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#8a7a9c; font-family:Arial, sans-serif;">Portfolio inquiry</p>
+                          <h1 style="margin:0; font-size:25px; font-weight:400; color:#423a52; font-style:italic;">A message from ${name}</h1>
+                        </td>
+                      </tr>
+
+                      <!-- Body -->
+                      <tr>
+                        <td style="padding:32px 44px;">
+                          <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <tr>
+                              <td style="padding:0 0 20px 0; width:90px; vertical-align:top; font-size:12px; letter-spacing:0.5px; color:#b3a6bd; text-transform:uppercase;">Name</td>
+                              <td style="padding:0 0 20px 0; font-size:14px; color:#423a52;">${name}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:0 0 20px 0; vertical-align:top; font-size:12px; letter-spacing:0.5px; color:#b3a6bd; text-transform:uppercase;">Email</td>
+                              <td style="padding:0 0 20px 0; font-size:14px;"><a href="mailto:${email}" style="color:#b487a0; text-decoration:none;">${email}</a></td>
+                            </tr>
+                            <tr>
+                              <td style="padding:0; vertical-align:top; font-size:12px; letter-spacing:0.5px; color:#b3a6bd; text-transform:uppercase;">Message</td>
+                              <td style="padding:0; font-size:14px; line-height:1.8; color:#5a5063; white-space:pre-wrap;">${message}</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <!-- CTA -->
+                      <tr>
+                        <td style="padding:0 44px 36px 44px;">
+                          <a href="mailto:${email}" style="display:inline-block; padding:13px 30px; border-radius:999px; background:linear-gradient(120deg, #d9c8ec, #f0c9d8, #fad6b8); color:#4a3f57; font-size:13px; font-family:Arial, sans-serif; letter-spacing:0.5px; font-weight:bold; text-decoration:none;">Reply to ${name} →</a>
+                        </td>
+                      </tr>
+
+                      <!-- Footer -->
+                      <tr>
+                        <td style="padding:18px 44px; border-top:1px solid #f0ebe4; text-align:center;">
+                          <p style="margin:0; font-size:11px; color:#b8afc0; font-family:Arial, sans-serif; letter-spacing:0.5px;">daheekim.app · Contact form</p>
+                        </td>
+                      </tr>
+
+                      <!-- Pastel gradient bottom line -->
+                      <tr>
+                        <td style="height:5px; background:linear-gradient(90deg, #e8e0f5, #f5e0e8, #fbe8d9, #f5e0e8, #e8e0f5);"></td>
+                      </tr>
+
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </body>
+            </html>
             `,
         };
 
