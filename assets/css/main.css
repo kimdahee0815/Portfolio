@@ -3262,6 +3262,10 @@ body.is-touch .main {
     animation: dividerPulse 2s infinite ease-in-out 1.2s;
 }
 
+#resume-download-btn {
+    cursor: pointer;
+}
+
 @keyframes dividerPulse {
     0%,
     100% {
