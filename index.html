@@ -131,12 +131,113 @@
 				<div class="content">
 					<header>
 						<h2>My Work</h2>
-						<p>This is a showcase of full-stack and frontend web applications I built, <br/>including web applications such as: <br/>- a full-stack platform for global developer collaboration (Currently in development)<br/>- a tour booking system<br/>- a wedding planning tool<br/>- a movie search engine<br/>- a video sharing site<br/>- a recipe finder <br/>Each project is either fully deployed or presented with a preview and source code.</p>
+						<p>This is a showcase of full-stack and frontend web applications I built, <br/>including web applications such as: <br/>- a CCTV-based industrial safety monitoring system<br/>- a full-stack platform for global developer collaboration (Currently in development)<br/>- a tour booking system<br/>- a wedding planning tool<br/>- a movie search engine<br/>- a video sharing site<br/>- a recipe finder <br/>Each project is either fully deployed or presented with a preview and source code.</p>
 					</header>
 
 					<!-- Gallery  -->
 						<div class="gallery">		
-							<article class="from-left">	
+							<article class="from-left">
+								<div class="work-img">
+										<video 
+											class="img-fluid open-demo-modal"
+    									data-demo="videos/Watchers.mp4"
+    									data-type="video"
+    									data-title="Watchers"
+											data-link="https://github.com/kimdahee0815/watchers"
+											data-desc="<span class='emoji'>🦺</span> Watchers: CCTV-Based Industrial Safety Auto-Labeling & Detection System
+											A full MLOps pipeline that turns raw CCTV footage into a continuously-improving YOLO model for forklift/person/helmet/no-helmet detection. Built as team lead over backend, MCP server, and pipeline design during a 4-person, 1.5-week sprint.
+
+											<span class='section-title'>🛠️ Tech Stack</span>
+											<span class='feature-title'>🧠 Backend: FastAPI + PostgreSQL</span>
+											<span class='feature-detail'>35 endpoints, 9-table schema, Alembic migrations, control-plane architecture that never stores video itself</span>
+											<span class='feature-title'>🎯 ML: YOLO + Grounding DINO</span>
+											<span class='feature-detail'>Zero-shot detection merged with Active Learning drafts, motion-diff frame extraction, IoU-based dedup</span>
+											<span class='feature-title'>🤖 MCP Server (FastMCP)</span>
+											<span class='feature-detail'>11 tools wrapping backend REST APIs, connected via OpenAI Responses API native remote MCP integration</span>
+											<span class='feature-title'>🖥️ Frontend: Electron + React</span>
+											<span class='feature-detail'>Dashboard, chat UI with rich card rendering, training history, and labeling KPI views</span>
+											<span class='feature-title'>☁️ GPU Server: separate FastAPI process</span>
+											<span class='feature-detail'>Handles training, auto-labeling, and inference; communicates via REST trigger + async callback reporting</span>
+
+											<span class='section-title'>🔑 Key Features</span>
+											<span class='feature-title'>🏷️ Automated Labeling Pipeline</span>
+											<span class='feature-detail'>Motion-diff frame extraction → Grounding DINO + Active Learning dual drafts → CVAT human review → dataset build</span>
+											<span class='feature-title'>📈 Iterative Model Tuning</span>
+											<span class='feature-detail'>Systematic hyperparameter experiments (SGD vs AdamW vs MuSGD) improved no_helmet Recall from 0.602 to 0.766+</span>
+											<span class='feature-title'>🥇 Gold-Set Promotion Gating</span>
+											<span class='feature-detail'>New models only promoted to production if safety-critical no_helmet Recall improves without degrading other classes</span>
+											<span class='feature-title'>💬 Natural-Language Ops Chat</span>
+											<span class='feature-detail'>Ask the system to start training or labeling, or query KPIs, directly through conversational chat</span>
+											<span class='feature-title'>🔒 Class-Index Integrity Locking</span>
+											<span class='feature-detail'>Prevents label-index mismatches from ever being baked into trained model weights</span>
+
+											<span class='section-title'>🌐 Highlights</span>
+											<span class='feature-title'>🧩 4-Service Architecture</span>
+											<span class='feature-detail'>Backend, GPU-backend, MCP-backend, and Electron frontend as independently deployed services</span>
+											<span class='feature-title'>🛡️ Safety-First ML Design</span>
+											<span class='feature-detail'>Three-layer safeguards: human-review gating, promotion gating, and physical isolation of evaluation data</span>
+											<span class='feature-title'>👥 Team Leadership</span>
+											<span class='feature-detail'>Led a 4-person team, owned backend/MCP architecture end-to-end, coordinated data/model workstreams</span>"
+										autoplay
+    								muted
+    								loop
+    								playsinline
+										poster="images/fulls/watchers.png"
+    								style="width: 100%; height: 100%; object-fit: cover;"
+										>
+										this browser does not support the video tag.
+									</video>
+									</div>
+								</a>
+								<div class="work-content">
+									<h3 class="project-h3">
+										<a class="project-link open-demo-modal" 
+											data-demo="videos/watchers.mp4"
+    									data-type="video"
+    									data-title="Watchers"
+											data-link="https://github.com/The-Watcherss"
+											data-desc="<span class='emoji'>🦺</span> Watchers: CCTV-Based Industrial Safety Auto-Labeling & Detection System
+											A full MLOps pipeline that turns raw CCTV footage into a continuously-improving YOLO model for forklift/person/helmet/no-helmet detection. Built as team lead over backend, MCP server, and pipeline design during a 4-person, 1.5-week sprint.
+
+											<span class='section-title'>🛠️ Tech Stack</span>
+											<span class='feature-title'>🧠 Backend: FastAPI + PostgreSQL</span>
+											<span class='feature-detail'>35 endpoints, 9-table schema, Alembic migrations, control-plane architecture that never stores video itself</span>
+											<span class='feature-title'>🎯 ML: YOLO + Grounding DINO</span>
+											<span class='feature-detail'>Zero-shot detection merged with Active Learning drafts, motion-diff frame extraction, IoU-based dedup</span>
+											<span class='feature-title'>🤖 MCP Server (FastMCP)</span>
+											<span class='feature-detail'>11 tools wrapping backend REST APIs, connected via OpenAI Responses API native remote MCP integration</span>
+											<span class='feature-title'>🖥️ Frontend: Electron + React</span>
+											<span class='feature-detail'>Dashboard, chat UI with rich card rendering, training history, and labeling KPI views</span>
+											<span class='feature-title'>☁️ GPU Server: separate FastAPI process</span>
+											<span class='feature-detail'>Handles training, auto-labeling, and inference; communicates via REST trigger + async callback reporting</span>
+
+											<span class='section-title'>🔑 Key Features</span>
+											<span class='feature-title'>🏷️ Automated Labeling Pipeline</span>
+											<span class='feature-detail'>Motion-diff frame extraction → Grounding DINO + Active Learning dual drafts → CVAT human review → dataset build</span>
+											<span class='feature-title'>📈 Iterative Model Tuning</span>
+											<span class='feature-detail'>Systematic hyperparameter experiments (SGD vs AdamW vs MuSGD) improved no_helmet Recall from 0.602 to 0.766+</span>
+											<span class='feature-title'>🥇 Gold-Set Promotion Gating</span>
+											<span class='feature-detail'>New models only promoted to production if safety-critical no_helmet Recall improves without degrading other classes</span>
+											<span class='feature-title'>💬 Natural-Language Ops Chat</span>
+											<span class='feature-detail'>Ask the system to start training or labeling, or query KPIs, directly through conversational chat</span>
+											<span class='feature-title'>🔒 Class-Index Integrity Locking</span>
+											<span class='feature-detail'>Prevents label-index mismatches from ever being baked into trained model weights</span>
+
+											<span class='section-title'>🌐 Highlights</span>
+											<span class='feature-title'>🧩 4-Service Architecture</span>
+											<span class='feature-detail'>Backend, GPU-backend, MCP-backend, and Electron frontend as independently deployed services</span>
+											<span class='feature-title'>🛡️ Safety-First ML Design</span>
+											<span class='feature-detail'>Three-layer safeguards: human-review gating, promotion gating, and physical isolation of evaluation data</span>
+											<span class='feature-title'>👥 Team Leadership</span>
+											<span class='feature-detail'>Led a 4-person team, owned backend/MCP architecture end-to-end, coordinated data/model workstreams</span>"
+										>
+										<img src="images/watchers.ico" width="25" height="25" alt="Watchers"/>Watchers
+										<img src="images/click.ico" width="33" height="33" alt="Click"/>
+									</a>
+								</h3>
+								</div>
+							</article>
+							<article class="from-right">	
 								<div class="work-img">						
 								<img src="images/fulls/thinkstorm.png" 
 									class="img-fluid open-demo-modal"
@@ -237,7 +338,7 @@
 						</h3>
 						</div>
 							</article>
-							<article class="from-right">
+							<article class="from-left">
 								<div class="work-img">						
 										<video 
 											class="img-fluid open-demo-modal"
@@ -342,7 +443,7 @@
 								</h3>
 								</div>
 							</article>
-							<article class="from-left">	
+							<article class="from-right">	
 								<div class="work-img">
 										<video 
 											class="img-fluid open-demo-modal"
@@ -447,7 +548,7 @@
 								</h3>
 							</div>							
 							</article>
-							<article class="from-right">
+							<article class="from-left">
 								<div class="work-img">
 										<video 
 											class="img-fluid open-demo-modal"
@@ -552,7 +653,7 @@
 								</h3>							
 								</div>
 							</article>
-							<article class="from-left">					
+							<article class="from-right">					
 									<div class="work-img">			
 										<video 
 											class="img-fluid open-demo-modal"
@@ -645,7 +746,7 @@
 								</h3>
 								</div>
 						</article>
-						<article class="from-right">
+						<article class="from-left">
 							<div class="work-img">
 										<video 
 											class="img-fluid open-demo-modal"
