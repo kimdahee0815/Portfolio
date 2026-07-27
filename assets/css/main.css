@@ -1418,6 +1418,27 @@ ul.headericons a {
     color: white;
 }
 
+ul.headericons .lang-toggle-btn {
+    width: auto;
+    height: 2em;
+    line-height: calc(2em - 2px);
+    padding: 0 0.75em;
+    margin-left: 0.4em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+ul.headericons .lang-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
 /* Sections/Article */
 
 header {

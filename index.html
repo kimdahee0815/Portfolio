@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Dahee Kim</title>
+		<title data-i18n="site_name">Dahee Kim</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -12,22 +12,23 @@
 
 		<!-- Header -->
 			<header id="header" class="hidden">
-				<h1>Dahee Kim</h1>
+				<h1 data-i18n="site_name">Dahee Kim</h1>
 				<ul class="headericons">
 						<li><a target="_blank" href="https://github.com/kimdahee0815" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						<li><a target="_blank" href="https://www.linkedin.com/in/dahee-kim-6aaa5b267/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 						<li><a target="_blank" href="https://discordapp.com/users/1077157910553038868" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
-						<li><a id="resume-download-btn" title="Download Resume (EN & KR)" class="icon solid fa-file-pdf"><span class="label">Resume</span></a></li>
+						<li><a id="resume-download-btn" data-i18n-attr="title:resume_title" title="Download Resume (EN & KR)" class="icon solid fa-file-pdf"><span class="label" data-i18n="resume_label">Resume</span></a></li>
+						<li><a href="#" id="lang-toggle" class="lang-toggle-btn" data-i18n="lang_toggle">한국어</a></li>
 						<!-- <li><a target="_blank" href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
 					</ul>
 				<nav>
 					<ul>
-						<li><a href="#three">Who I Am</a></li>
-						<li><a href="#one">What Drives Me</a></li>
-						<li><a href="#two">What I Bring</a></li>
-						<li><a href="#work">My Work</a></li>
-						<li><a href="#blog">Blog</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li><a href="#three" data-i18n="nav_who">Who I Am</a></li>
+						<li><a href="#one" data-i18n="nav_drives">What Drives Me</a></li>
+						<li><a href="#two" data-i18n="nav_bring">What I Bring</a></li>
+						<li><a href="#work" data-i18n="nav_work">My Work</a></li>
+						<li><a href="#blog" data-i18n="nav_blog">Blog</a></li>
+						<li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -36,11 +37,11 @@
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<h2><span class="mobile-br"></span>Dahee Kim</h2>
+						<h2><span class="mobile-br"></span><span data-i18n="site_name">Dahee Kim</span></h2>
 					</header>
-					<h2 class="intro-subtitle"><span class="text-slider-items">Software Engineer,Full-Stack Developer,Front-End Developer,Back-End Developer</span><strong class="text-slider"></strong></h2>
+					<h2 class="intro-subtitle"><span class="text-slider-items" data-i18n="intro_roles">Software Engineer,Full-Stack Developer,Front-End Developer,Back-End Developer</span><strong class="text-slider"></strong></h2>
 					<footer>
-						<a href="#three" class="button style2 down">More</a>
+						<a href="#three" class="button style2 down" data-i18n="btn_more">More</a>
 					</footer>
 				</div>
 			</section>
@@ -55,8 +56,9 @@
 				<div class="arrow-toggle">←</div>
 				<div class="content box style2">
 					<header>
-						<h2>Who I Am</h2>
+						<h2 data-i18n="three_title">Who I Am</h2>
 					</header>
+					<div data-i18n-html="three_body">
 					👋 Hi, there!
 					<br>
 					I'm a <strong>full-stack software engineer</strong> who believes great ideas can be built from anywhere.
@@ -68,12 +70,13 @@
 					🌱 <strong>Experience</strong> becomes <strong>growth.</strong>
 					<br>
 					<br>
-					To me, the best workplace is wherever <strong>great people</strong> and <strong>meaningful problems</strong> come together. 
-					<br> 
+					To me, the best workplace is wherever <strong>great people</strong> and <strong>meaningful problems</strong> come together.
+					<br>
 					I believe the best opportunities are the ones where I can <strong>learn from others</strong> and <strong>build something that truly helps people.</strong>
+					</div>
 				</div>
 
-				<a href="#one" class="button style2 down anchored">Next</a>
+				<a href="#one" class="button style2 down anchored" data-i18n="btn_next">Next</a>
 			</section>
 		<!-- One -->
 			<section id="one" class="main style2 left dark fullscreen">
@@ -81,9 +84,9 @@
 				<div class="arrow-toggle">→</div>
 				<div class="content box style2">
 					<header>
-						<h2>What Drives Me</h2>
+						<h2 data-i18n="one_title">What Drives Me</h2>
 					</header>
-					<p>
+					<p data-i18n-html="one_body">
 						💡 <strong>Curiosity</strong> is what starts every journey for me. A simple question often grows into a project, and <strong></strong>every project teaches me something new.</strong>
 						<br><br>
 						🐞 I believe the best learning happens during <strong>debugging.</strong> Every bug gives me a reason to ask <strong>"why?"</strong>, uncover <strong>how things really work</strong>, and discover <strong>something I didn't know before.</strong>
@@ -95,7 +98,7 @@
 						🚀 Every project is a chance to <strong>learn</strong>, <strong>grow with great people</strong>, and create <strong>something meaningful</strong>.
 					</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
+				<a href="#two" class="button style2 down anchored" data-i18n="btn_next">Next</a>
 			</section>
 
 		<!-- Two -->
@@ -104,9 +107,9 @@
 				<div class="arrow-toggle">←</div>
 				<div class="content box style2">
 					<header>
-						<h2>What I Bring</h2>
+						<h2 data-i18n="two_title">What I Bring</h2>
 					</header>
-					<p>
+					<p data-i18n-html="two_body">
 						💻 <strong>Full-Stack Development</strong><br>
 						I'm comfortable working across the <strong>entire development lifecycle</strong>, building modern <strong>frontend</strong>, scalable <strong>backend systems</strong>, and <strong>production-ready applications</strong>.
 						<br><br>
@@ -123,15 +126,15 @@
 						One of my strengths is <strong>learning new technologies quickly</strong> and applying them to real projects, allowing me to step in quickly and make meaningful contributions wherever the product needs it most.
 					</p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#work" class="button style2 down anchored" data-i18n="btn_next">Next</a>
 			</section>
 
 		<!-- Work -->
 			<section id="work" class="main style3 primary">
 				<div class="content">
 					<header>
-						<h2>My Work</h2>
-						<p>This is a showcase of full-stack and frontend web applications I built, <br/>including web applications such as: <br/>- a CCTV-based industrial safety monitoring system<br/>- a full-stack platform for global developer collaboration (Currently in development)<br/>- a tour booking system<br/>- a wedding planning tool<br/>- a movie search engine<br/>- a video sharing site<br/>- a recipe finder <br/>Each project is either fully deployed or presented with a preview and source code.</p>
+						<h2 data-i18n="work_title">My Work</h2>
+						<p data-i18n-html="work_body">This is a showcase of full-stack and frontend web applications I built, <br/>including web applications such as: <br/>- a CCTV-based industrial safety monitoring system<br/>- a full-stack platform for global developer collaboration (Currently in development)<br/>- a tour booking system<br/>- a wedding planning tool<br/>- a movie search engine<br/>- a video sharing site<br/>- a recipe finder <br/>Each project is either fully deployed or presented with a preview and source code.</p>
 					</header>
 
 					<!-- Gallery  -->
@@ -178,6 +181,40 @@
 											<span class='feature-detail'>Three-layer safeguards: human-review gating, promotion gating, and physical isolation of evaluation data</span>
 											<span class='feature-title'>👥 Team Leadership</span>
 											<span class='feature-detail'>Led a 4-person team, owned backend/MCP architecture end-to-end, coordinated data/model workstreams</span>"
+										data-desc-ko="<span class='emoji'>🦺</span> Watchers: CCTV 기반 산업 안전 자동 라벨링 & 탐지 시스템
+										원본 CCTV 영상을 지게차/사람/헬멧 착용 여부를 인식하는, 지속적으로 개선되는 YOLO 모델로 바꿔주는 풀 MLOps 파이프라인입니다. 4인 팀, 1.5주 스프린트 동안 팀 리드로서 백엔드, MCP 서버, 파이프라인 설계를 담당했습니다.
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 백엔드: FastAPI + PostgreSQL</span>
+										<span class='feature-detail'>35개 엔드포인트, 9개 테이블 스키마, Alembic 마이그레이션, 영상 자체는 저장하지 않는 컨트롤 플레인 아키텍처</span>
+										<span class='feature-title'>🎯 ML: YOLO + Grounding DINO</span>
+										<span class='feature-detail'>제로샷 탐지와 능동 학습(Active Learning) 초안을 병합, 모션 diff 기반 프레임 추출, IoU 기반 중복 제거</span>
+										<span class='feature-title'>🤖 MCP 서버 (FastMCP)</span>
+										<span class='feature-detail'>백엔드 REST API를 감싸는 11개 툴, OpenAI Responses API의 네이티브 원격 MCP 연동</span>
+										<span class='feature-title'>🖥️ 프론트엔드: Electron + React</span>
+										<span class='feature-detail'>대시보드, 리치 카드 렌더링을 지원하는 채팅 UI, 학습 이력 및 라벨링 KPI 뷰</span>
+										<span class='feature-title'>☁️ GPU 서버: 별도 FastAPI 프로세스</span>
+										<span class='feature-detail'>학습, 자동 라벨링, 추론을 처리하며 REST 트리거 + 비동기 콜백 방식으로 통신</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>🏷️ 자동 라벨링 파이프라인</span>
+										<span class='feature-detail'>모션 diff 프레임 추출 → Grounding DINO + Active Learning 이중 초안 → CVAT 사람 검수 → 데이터셋 구축</span>
+										<span class='feature-title'>📈 반복적 모델 튜닝</span>
+										<span class='feature-detail'>SGD vs AdamW vs MuSGD 체계적 하이퍼파라미터 실험으로 no_helmet Recall을 0.602에서 0.766+ 로 개선</span>
+										<span class='feature-title'>🥇 골드셋 승격 게이팅</span>
+										<span class='feature-detail'>안전에 직결되는 no_helmet Recall이 다른 클래스 성능 저하 없이 개선될 때만 신규 모델을 프로덕션에 승격</span>
+										<span class='feature-title'>💬 자연어 운영 챗봇</span>
+										<span class='feature-detail'>대화형 채팅으로 학습·라벨링 시작이나 KPI 조회를 바로 요청 가능</span>
+										<span class='feature-title'>🔒 클래스 인덱스 무결성 잠금</span>
+										<span class='feature-detail'>라벨 인덱스 불일치가 학습된 모델 가중치에 그대로 박히는 것을 방지</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 4개 서비스 아키텍처</span>
+										<span class='feature-detail'>백엔드, GPU 백엔드, MCP 백엔드, Electron 프론트엔드를 독립적으로 배포되는 서비스로 구성</span>
+										<span class='feature-title'>🛡️ 안전 최우선 ML 설계</span>
+										<span class='feature-detail'>사람 검수 게이팅, 승격 게이팅, 평가 데이터의 물리적 분리라는 3중 안전장치</span>
+										<span class='feature-title'>👥 팀 리더십</span>
+										<span class='feature-detail'>4인 팀을 이끌며 백엔드/MCP 아키텍처를 처음부터 끝까지 담당, 데이터/모델 작업 흐름 조율</span>"
 										autoplay
     								muted
     								loop
@@ -185,7 +222,7 @@
 										poster="images/fulls/watchers.png"
     								style="width: 100%; height: 100%; object-fit: cover;"
 										>
-										this browser does not support the video tag.
+										<span data-i18n="video_fallback">this browser does not support the video tag.</span>
 									</video>
 									</div>
 								</a>
@@ -230,6 +267,40 @@
 											<span class='feature-detail'>Three-layer safeguards: human-review gating, promotion gating, and physical isolation of evaluation data</span>
 											<span class='feature-title'>👥 Team Leadership</span>
 											<span class='feature-detail'>Led a 4-person team, owned backend/MCP architecture end-to-end, coordinated data/model workstreams</span>"
+										data-desc-ko="<span class='emoji'>🦺</span> Watchers: CCTV 기반 산업 안전 자동 라벨링 & 탐지 시스템
+										원본 CCTV 영상을 지게차/사람/헬멧 착용 여부를 인식하는, 지속적으로 개선되는 YOLO 모델로 바꿔주는 풀 MLOps 파이프라인입니다. 4인 팀, 1.5주 스프린트 동안 팀 리드로서 백엔드, MCP 서버, 파이프라인 설계를 담당했습니다.
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 백엔드: FastAPI + PostgreSQL</span>
+										<span class='feature-detail'>35개 엔드포인트, 9개 테이블 스키마, Alembic 마이그레이션, 영상 자체는 저장하지 않는 컨트롤 플레인 아키텍처</span>
+										<span class='feature-title'>🎯 ML: YOLO + Grounding DINO</span>
+										<span class='feature-detail'>제로샷 탐지와 능동 학습(Active Learning) 초안을 병합, 모션 diff 기반 프레임 추출, IoU 기반 중복 제거</span>
+										<span class='feature-title'>🤖 MCP 서버 (FastMCP)</span>
+										<span class='feature-detail'>백엔드 REST API를 감싸는 11개 툴, OpenAI Responses API의 네이티브 원격 MCP 연동</span>
+										<span class='feature-title'>🖥️ 프론트엔드: Electron + React</span>
+										<span class='feature-detail'>대시보드, 리치 카드 렌더링을 지원하는 채팅 UI, 학습 이력 및 라벨링 KPI 뷰</span>
+										<span class='feature-title'>☁️ GPU 서버: 별도 FastAPI 프로세스</span>
+										<span class='feature-detail'>학습, 자동 라벨링, 추론을 처리하며 REST 트리거 + 비동기 콜백 방식으로 통신</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>🏷️ 자동 라벨링 파이프라인</span>
+										<span class='feature-detail'>모션 diff 프레임 추출 → Grounding DINO + Active Learning 이중 초안 → CVAT 사람 검수 → 데이터셋 구축</span>
+										<span class='feature-title'>📈 반복적 모델 튜닝</span>
+										<span class='feature-detail'>SGD vs AdamW vs MuSGD 체계적 하이퍼파라미터 실험으로 no_helmet Recall을 0.602에서 0.766+ 로 개선</span>
+										<span class='feature-title'>🥇 골드셋 승격 게이팅</span>
+										<span class='feature-detail'>안전에 직결되는 no_helmet Recall이 다른 클래스 성능 저하 없이 개선될 때만 신규 모델을 프로덕션에 승격</span>
+										<span class='feature-title'>💬 자연어 운영 챗봇</span>
+										<span class='feature-detail'>대화형 채팅으로 학습·라벨링 시작이나 KPI 조회를 바로 요청 가능</span>
+										<span class='feature-title'>🔒 클래스 인덱스 무결성 잠금</span>
+										<span class='feature-detail'>라벨 인덱스 불일치가 학습된 모델 가중치에 그대로 박히는 것을 방지</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 4개 서비스 아키텍처</span>
+										<span class='feature-detail'>백엔드, GPU 백엔드, MCP 백엔드, Electron 프론트엔드를 독립적으로 배포되는 서비스로 구성</span>
+										<span class='feature-title'>🛡️ 안전 최우선 ML 설계</span>
+										<span class='feature-detail'>사람 검수 게이팅, 승격 게이팅, 평가 데이터의 물리적 분리라는 3중 안전장치</span>
+										<span class='feature-title'>👥 팀 리더십</span>
+										<span class='feature-detail'>4인 팀을 이끌며 백엔드/MCP 아키텍처를 처음부터 끝까지 담당, 데이터/모델 작업 흐름 조율</span>"
 										>
 										<img src="images/watchers.ico" width="25" height="25" alt="Watchers"/>Watchers
 										<img src="images/click.ico" width="33" height="33" alt="Click"/>
@@ -283,6 +354,44 @@
 										<span class='feature-detail'>Quickly learned and applied unfamiliar technologies to meet evolving project needs</span>
 										<span class='feature-title'>🛡️ Secure & Scalable Backend</span>
 										<span class='feature-detail'>Built with Redis, Prisma, and PostgreSQL to ensure reliability and scalability</span>"
+									data-desc-ko="<span class='emoji'>🌩️</span>ThinkStorm: 혁신과 협업이 만나는 곳
+										개발자, 학습자, 혁신가들이 실제 프로젝트를 통해 아이디어를 현실로 만들 수 있도록 돕는 풀스택 협업 플랫폼입니다.
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 풀스택 아키텍처</span>
+										<span class='feature-detail'>모듈성과 성능을 고려해 설계한 Next.js, NestJS, PostgreSQL, Redis, Prisma</span>
+										<span class='feature-title'>🗂️ Redis 연동</span>
+										<span class='feature-detail'>빠르고 안전한 접근을 위한 캐싱 및 레이트 리미팅 최적화</span>
+										<span class='feature-title'>📦 Vercel & Docker & Fly.io</span>
+										<span class='feature-detail'>확장 가능한 호스팅과 컨테이너화된 배포</span>
+										<span class='feature-title'>🔐 JWT 인증</span>
+										<span class='feature-detail'>안전한 로그인/세션 처리를 통한 견고한 엔드포인트 보호</span>
+										<span class='feature-title'>🧪 CI/CD 파이프라인</span>
+										<span class='feature-detail'>Jest 기반 테스트를 자동 배포 플로우에 통합</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>📁 프로젝트 협업 시스템</span>
+										<span class='feature-detail'>상세 태깅과 팀 관리 도구로 프로젝트를 생성·관리·기여</span>
+										<span class='feature-title'>🧑‍💼 동적 프로필</span>
+										<span class='feature-detail'>실제 프로젝트 기여와 추천을 담은 살아있는 이력서 구축</span>
+										<span class='feature-title'>🎯 주간 챌린지</span>
+										<span class='feature-detail'>테마별 경쟁을 통해 실력을 갈고닦고 리더보드에 도전</span>
+										<span class='feature-title'>📚 학습 부트캠프</span>
+										<span class='feature-detail'>자격증 기반 학습 경로로 실전 스킬 개발</span>
+										<span class='feature-title'>💼 이력서 없는 채용</span>
+										<span class='feature-detail'>이력서 없이 프로젝트만으로 실력을 증명</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🌍 글로벌 협업</span>
+										<span class='feature-detail'>전 세계 개발자, 크리에이터와 연결</span>
+										<span class='feature-title'>📨 실시간 알림</span>
+										<span class='feature-detail'>프로젝트 진행 상황, 메시지, 기회 소식을 실시간으로 확인</span>
+										<span class='feature-title'>🧑‍🏫 멘토링 & 온보딩</span>
+										<span class='feature-detail'>신규 개발자의 온보딩과 지식 공유를 이끔</span>
+										<span class='feature-title'>🚀 빠른 기술 습득</span>
+										<span class='feature-detail'>낯선 기술도 빠르게 학습해 변화하는 프로젝트 요구에 적용</span>
+										<span class='feature-title'>🛡️ 안전하고 확장 가능한 백엔드</span>
+										<span class='feature-detail'>Redis, Prisma, PostgreSQL로 신뢰성과 확장성 확보</span>"
 									/>	
 								</div>
 						</a>
@@ -331,6 +440,44 @@
 										<span class='feature-detail'>Quickly learned and applied unfamiliar technologies to meet evolving project needs</span>
 										<span class='feature-title'>🛡️ Secure & Scalable Backend</span>
 										<span class='feature-detail'>Built with Redis, Prisma, and PostgreSQL to ensure reliability and scalability</span>"
+									data-desc-ko="<span class='emoji'>🌩️</span>ThinkStorm: 혁신과 협업이 만나는 곳
+										개발자, 학습자, 혁신가들이 실제 프로젝트를 통해 아이디어를 현실로 만들 수 있도록 돕는 풀스택 협업 플랫폼입니다.
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 풀스택 아키텍처</span>
+										<span class='feature-detail'>모듈성과 성능을 고려해 설계한 Next.js, NestJS, PostgreSQL, Redis, Prisma</span>
+										<span class='feature-title'>🗂️ Redis 연동</span>
+										<span class='feature-detail'>빠르고 안전한 접근을 위한 캐싱 및 레이트 리미팅 최적화</span>
+										<span class='feature-title'>📦 Vercel & Docker & Fly.io</span>
+										<span class='feature-detail'>확장 가능한 호스팅과 컨테이너화된 배포</span>
+										<span class='feature-title'>🔐 JWT 인증</span>
+										<span class='feature-detail'>안전한 로그인/세션 처리를 통한 견고한 엔드포인트 보호</span>
+										<span class='feature-title'>🧪 CI/CD 파이프라인</span>
+										<span class='feature-detail'>Jest 기반 테스트를 자동 배포 플로우에 통합</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>📁 프로젝트 협업 시스템</span>
+										<span class='feature-detail'>상세 태깅과 팀 관리 도구로 프로젝트를 생성·관리·기여</span>
+										<span class='feature-title'>🧑‍💼 동적 프로필</span>
+										<span class='feature-detail'>실제 프로젝트 기여와 추천을 담은 살아있는 이력서 구축</span>
+										<span class='feature-title'>🎯 주간 챌린지</span>
+										<span class='feature-detail'>테마별 경쟁을 통해 실력을 갈고닦고 리더보드에 도전</span>
+										<span class='feature-title'>📚 학습 부트캠프</span>
+										<span class='feature-detail'>자격증 기반 학습 경로로 실전 스킬 개발</span>
+										<span class='feature-title'>💼 이력서 없는 채용</span>
+										<span class='feature-detail'>이력서 없이 프로젝트만으로 실력을 증명</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🌍 글로벌 협업</span>
+										<span class='feature-detail'>전 세계 개발자, 크리에이터와 연결</span>
+										<span class='feature-title'>📨 실시간 알림</span>
+										<span class='feature-detail'>프로젝트 진행 상황, 메시지, 기회 소식을 실시간으로 확인</span>
+										<span class='feature-title'>🧑‍🏫 멘토링 & 온보딩</span>
+										<span class='feature-detail'>신규 개발자의 온보딩과 지식 공유를 이끔</span>
+										<span class='feature-title'>🚀 빠른 기술 습득</span>
+										<span class='feature-detail'>낯선 기술도 빠르게 학습해 변화하는 프로젝트 요구에 적용</span>
+										<span class='feature-title'>🛡️ 안전하고 확장 가능한 백엔드</span>
+										<span class='feature-detail'>Redis, Prisma, PostgreSQL로 신뢰성과 확장성 확보</span>"
 										target="_blank">
 								<img src="images/thinkstorm.ico" width="25" height="25" alt="ThinkStorm"/>ThinkStorm(WiP)
 								<img src="images/click.ico" width="33" height="33" alt="Click"/>
@@ -382,6 +529,42 @@
 											<span class='feature-detail'>Logical folder structure for routes, controllers, and views</span>
 											<span class='feature-title'>📱 Mobile-Friendly UI</span>
 											<span class='feature-detail'>Responsive design via Pug and CSS for all screen sizes</span>"
+										data-desc-ko="<span class='emoji'>🌿</span>Natours: 친환경 투어 예약 웹앱
+										MERN 스택(React 제외)으로 구축한 완전한 기능의 투어 예약 플랫폼입니다.
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 MERN (React 제외)</span>
+										<span class='feature-detail'>MongoDB, Express, Node.js, 서버사이드 렌더링용 Pug</span>
+										<span class='feature-title'>🎨 Pug</span>
+										<span class='feature-detail'>빠르고 SEO에 강한 SSR을 위한 동적 템플릿 엔진</span>
+										<span class='feature-title'>📐 MVC 아키텍처</span>
+										<span class='feature-detail'>깔끔하고 유지보수하기 쉬운 코드 구조</span>
+										<span class='feature-title'>💳 Stripe 결제 연동</span>
+										<span class='feature-detail'>투어 예약을 위한 안전한 결제 처리</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>🗺️ 인터랙티브 Mapbox 지도</span>
+										<span class='feature-detail'>투어 위치를 시각적이고 직관적으로 탐색</span>
+										<span class='feature-title'>👥 사용자 인증</span>
+										<span class='feature-detail'>JWT와 쿠키 기반 인증을 사용한 안전한 회원가입/로그인</span>
+										<span class='feature-title'>📧 이메일 연동</span>
+										<span class='feature-detail'>자동화된 환영 메일 및 비밀번호 재설정 메일</span>
+										<span class='feature-title'>💼 투어 관리</span>
+										<span class='feature-detail'>투어 상품 생성, 수정, 관리</span>
+										<span class='feature-title'>⭐ 사용자 리뷰</span>
+										<span class='feature-detail'>별점으로 예약한 투어를 평가하고 리뷰 작성</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>📊 시각화 대시보드</span>
+										<span class='feature-detail'>주요 투어 데이터와 사용자 활동을 한눈에 확인</span>
+										<span class='feature-title'>⚙️ 확장 가능한 REST API</span>
+										<span class='feature-detail'>사용자, 투어, 리뷰, 예약을 위한 모듈형 엔드포인트</span>
+										<span class='feature-title'>🧼 입력값 검증 & 안전한 라우팅</span>
+										<span class='feature-detail'>인젝션과 크로스 사이트 공격에 대한 방어</span>
+										<span class='feature-title'>🗂️ 체계적인 코드베이스</span>
+										<span class='feature-detail'>라우트, 컨트롤러, 뷰를 위한 논리적인 폴더 구조</span>
+										<span class='feature-title'>📱 모바일 친화적 UI</span>
+										<span class='feature-detail'>Pug와 CSS로 모든 화면 크기에 반응형 대응</span>"
 										autoplay
     								muted
     								loop
@@ -389,7 +572,7 @@
 										poster="images/fulls/natours.png"
     								style="width: 100%; height: auto; object-fit: cover;"
 										>
-										this browser does not support the video tag.
+										<span data-i18n="video_fallback">this browser does not support the video tag.</span>
 									</video>
 									</div>
 								</a>
@@ -435,7 +618,43 @@
 											<span class='feature-title'>🗂️ Organized Codebase</span>
 											<span class='feature-detail'>Logical folder structure for routes, controllers, and views</span>
 											<span class='feature-title'>📱 Mobile-Friendly UI</span>
-											<span class='feature-detail'>Responsive design via Pug and CSS for all screen sizes</span>" 
+											<span class='feature-detail'>Responsive design via Pug and CSS for all screen sizes</span>"
+										data-desc-ko="<span class='emoji'>🌿</span>Natours: 친환경 투어 예약 웹앱
+										MERN 스택(React 제외)으로 구축한 완전한 기능의 투어 예약 플랫폼입니다.
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 MERN (React 제외)</span>
+										<span class='feature-detail'>MongoDB, Express, Node.js, 서버사이드 렌더링용 Pug</span>
+										<span class='feature-title'>🎨 Pug</span>
+										<span class='feature-detail'>빠르고 SEO에 강한 SSR을 위한 동적 템플릿 엔진</span>
+										<span class='feature-title'>📐 MVC 아키텍처</span>
+										<span class='feature-detail'>깔끔하고 유지보수하기 쉬운 코드 구조</span>
+										<span class='feature-title'>💳 Stripe 결제 연동</span>
+										<span class='feature-detail'>투어 예약을 위한 안전한 결제 처리</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>🗺️ 인터랙티브 Mapbox 지도</span>
+										<span class='feature-detail'>투어 위치를 시각적이고 직관적으로 탐색</span>
+										<span class='feature-title'>👥 사용자 인증</span>
+										<span class='feature-detail'>JWT와 쿠키 기반 인증을 사용한 안전한 회원가입/로그인</span>
+										<span class='feature-title'>📧 이메일 연동</span>
+										<span class='feature-detail'>자동화된 환영 메일 및 비밀번호 재설정 메일</span>
+										<span class='feature-title'>💼 투어 관리</span>
+										<span class='feature-detail'>투어 상품 생성, 수정, 관리</span>
+										<span class='feature-title'>⭐ 사용자 리뷰</span>
+										<span class='feature-detail'>별점으로 예약한 투어를 평가하고 리뷰 작성</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>📊 시각화 대시보드</span>
+										<span class='feature-detail'>주요 투어 데이터와 사용자 활동을 한눈에 확인</span>
+										<span class='feature-title'>⚙️ 확장 가능한 REST API</span>
+										<span class='feature-detail'>사용자, 투어, 리뷰, 예약을 위한 모듈형 엔드포인트</span>
+										<span class='feature-title'>🧼 입력값 검증 & 안전한 라우팅</span>
+										<span class='feature-detail'>인젝션과 크로스 사이트 공격에 대한 방어</span>
+										<span class='feature-title'>🗂️ 체계적인 코드베이스</span>
+										<span class='feature-detail'>라우트, 컨트롤러, 뷰를 위한 논리적인 폴더 구조</span>
+										<span class='feature-title'>📱 모바일 친화적 UI</span>
+										<span class='feature-detail'>Pug와 CSS로 모든 화면 크기에 반응형 대응</span>" 
 											>
 										<img src="https://dahee-natours-project.s3.amazonaws.com/favicon.png" width="27" height="30" alt="Natours"/>Natours
 										<img src="images/click.ico" width="32" height="32" alt="Click"/>
@@ -487,6 +706,42 @@
 										<span class='feature-detail'>Frontend hosted on Netlify, backend on Fly.io</span>
 										<span class='feature-title'>📱 Mobile-Responsive UI</span>
 										<span class='feature-detail'>Optimized for all screen sizes and devices</span>"
+										data-desc-ko="<span class='emoji'>💍</span> WeddingYou: Spring Boot, React, MySQL로 만든 웨딩 플래너-예비부부 맞춤 견적 매칭 플랫폼
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🎨 프론트엔드: React + Axios</span>
+										<span class='feature-detail'>낙관적 업데이트를 적용한 반응형 동적 UI</span>
+										<span class='feature-title'>🧠 백엔드: Spring Boot</span>
+										<span class='feature-detail'>깔끔한 아키텍처의 확장 가능한 REST API</span>
+										<span class='feature-title'>💾 데이터베이스: MySQL (Railway)</span>
+										<span class='feature-detail'>안정적이고 구조화된 관계형 데이터 관리</span>
+										<span class='feature-title'>🔐 인증: 역할 기반</span>
+										<span class='feature-detail'>안전한 운영을 위한 사용자/관리자 권한 분리</span>
+										<span class='feature-title'>📦 배포: Docker, Netlify, Railway, Fly.io</span>
+										<span class='feature-detail'>도커화된 풀스택과 원활한 CI/CD 워크플로우</span>
+
+										<span class='section-title'>🎯 주요 기능</span>
+										<span class='feature-title'>📝 사전 견적 요청</span>
+										<span class='feature-detail'>예비부부가 상세 계획과 예산을 제출하면 플래너가 관련 요청에 응답</span>
+										<span class='feature-title'>🤝 플래너 매칭 시스템</span>
+										<span class='feature-detail'>플래너가 견적을 검토하고 적합한 고객을 선택</span>
+										<span class='feature-title'>💳 포트원(아임포트) 결제</span>
+										<span class='feature-detail'>실시간 확인이 가능한 안전하고 매끄러운 결제</span>
+										<span class='feature-title'>📬 SMTP 이메일 알림</span>
+										<span class='feature-detail'>비밀번호 재설정 및 계정 알림 포함</span>
+										<span class='feature-title'>📷 AWS S3 이미지 업로드</span>
+										<span class='feature-detail'>프로필 이미지와 포트폴리오를 위한 안전한 저장소</span>
+										<span class='feature-title'>⚡ 낙관적 UI</span>
+										<span class='feature-detail'>매끄러운 사용자 경험을 위한 즉각적인 화면 업데이트</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 서드파티 연동</span>
+										<span class='feature-detail'>포트원(아임포트), AWS S3, 이메일용 SMTP</span>
+										<span class='feature-title'>📦 풀스택 Docker 구성</span>
+										<span class='feature-detail'>손쉬운 오케스트레이션을 위한 통합 Dockerfile과 docker-compose</span>
+										<span class='feature-title'>🚀 Netlify & Fly.io 배포</span>
+										<span class='feature-detail'>프론트엔드는 Netlify, 백엔드는 Fly.io에 호스팅</span>
+										<span class='feature-title'>📱 모바일 반응형 UI</span>
+										<span class='feature-detail'>모든 화면 크기와 기기에 최적화</span>"
 										autoplay
     								muted
     								loop
@@ -494,7 +749,7 @@
 										poster="images/fulls/weddingYou.png"
     								style="width: 100%; height: auto; object-fit: cover;"
 										>
-										this browser does not support the video tag.
+										<span data-i18n="video_fallback">this browser does not support the video tag.</span>
 									</video>						
 									</div>		
 							</a>
@@ -540,7 +795,43 @@
 										<span class='feature-title'>🚀 Deployed with Netlify & Fly.io</span>
 										<span class='feature-detail'>Frontend hosted on Netlify, backend on Fly.io</span>
 										<span class='feature-title'>📱 Mobile-Responsive UI</span>
-										<span class='feature-detail'>Optimized for all screen sizes and devices</span>" 
+										<span class='feature-detail'>Optimized for all screen sizes and devices</span>"
+										data-desc-ko="<span class='emoji'>💍</span> WeddingYou: Spring Boot, React, MySQL로 만든 웨딩 플래너-예비부부 맞춤 견적 매칭 플랫폼
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🎨 프론트엔드: React + Axios</span>
+										<span class='feature-detail'>낙관적 업데이트를 적용한 반응형 동적 UI</span>
+										<span class='feature-title'>🧠 백엔드: Spring Boot</span>
+										<span class='feature-detail'>깔끔한 아키텍처의 확장 가능한 REST API</span>
+										<span class='feature-title'>💾 데이터베이스: MySQL (Railway)</span>
+										<span class='feature-detail'>안정적이고 구조화된 관계형 데이터 관리</span>
+										<span class='feature-title'>🔐 인증: 역할 기반</span>
+										<span class='feature-detail'>안전한 운영을 위한 사용자/관리자 권한 분리</span>
+										<span class='feature-title'>📦 배포: Docker, Netlify, Railway, Fly.io</span>
+										<span class='feature-detail'>도커화된 풀스택과 원활한 CI/CD 워크플로우</span>
+
+										<span class='section-title'>🎯 주요 기능</span>
+										<span class='feature-title'>📝 사전 견적 요청</span>
+										<span class='feature-detail'>예비부부가 상세 계획과 예산을 제출하면 플래너가 관련 요청에 응답</span>
+										<span class='feature-title'>🤝 플래너 매칭 시스템</span>
+										<span class='feature-detail'>플래너가 견적을 검토하고 적합한 고객을 선택</span>
+										<span class='feature-title'>💳 포트원(아임포트) 결제</span>
+										<span class='feature-detail'>실시간 확인이 가능한 안전하고 매끄러운 결제</span>
+										<span class='feature-title'>📬 SMTP 이메일 알림</span>
+										<span class='feature-detail'>비밀번호 재설정 및 계정 알림 포함</span>
+										<span class='feature-title'>📷 AWS S3 이미지 업로드</span>
+										<span class='feature-detail'>프로필 이미지와 포트폴리오를 위한 안전한 저장소</span>
+										<span class='feature-title'>⚡ 낙관적 UI</span>
+										<span class='feature-detail'>매끄러운 사용자 경험을 위한 즉각적인 화면 업데이트</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 서드파티 연동</span>
+										<span class='feature-detail'>포트원(아임포트), AWS S3, 이메일용 SMTP</span>
+										<span class='feature-title'>📦 풀스택 Docker 구성</span>
+										<span class='feature-detail'>손쉬운 오케스트레이션을 위한 통합 Dockerfile과 docker-compose</span>
+										<span class='feature-title'>🚀 Netlify & Fly.io 배포</span>
+										<span class='feature-detail'>프론트엔드는 Netlify, 백엔드는 Fly.io에 호스팅</span>
+										<span class='feature-title'>📱 모바일 반응형 UI</span>
+										<span class='feature-detail'>모든 화면 크기와 기기에 최적화</span>" 
 									>
 									<img src="images/weddingYou.ico" width="25" height="25" alt="WeddingYou"/>Wedding You
 									<img src="images/click.ico" width="33" height="33" alt="Click"/>
@@ -592,6 +883,42 @@
 											<span class='feature-detail'>Designed to work smoothly across all screen sizes</span>
 											<span class='feature-title'>⚙️ Clean Code Architecture</span>
 											<span class='feature-detail'>Maintainable structure using industry best practices</span>"
+										data-desc-ko="<span class='emoji'>🎬</span> Netflix & Chill: 풀스택 스트리밍 플랫폼
+										React와 Spring Boot로 만든 모던 넷플릭스풍 앱
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>⚛️ 프론트엔드: React + Redux + Axios</span>
+										<span class='feature-detail'>현대적인 상태 관리와 API 연동</span>
+										<span class='feature-title'>☕ 백엔드: Spring Boot + MySQL</span>
+										<span class='feature-detail'>관계형 데이터베이스를 활용한 견고한 서버 아키텍처</span>
+										<span class='feature-title'>🐳 Docker화</span>
+										<span class='feature-detail'>프론트엔드, 백엔드, 데이터베이스를 통합한 컨테이너</span>
+										<span class='feature-title'>☁️ 클라우드 배포</span>
+										<span class='feature-detail'>미디어와 API를 클라우드에 호스팅</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>🔎 영화 탐색 & 검색</span>
+										<span class='feature-detail'>검색 필터로 콘텐츠를 손쉽게 발견</span>
+										<span class='feature-title'>📽️ 예고편 재생</span>
+										<span class='feature-detail'>앱 내에서 공식 예고편 스트리밍</span>
+										<span class='feature-title'>⭐ 즐겨찾기 리스트</span>
+										<span class='feature-detail'>나만의 시청 목록 저장 및 관리</span>
+										<span class='feature-title'>🌐 반응형 다이나믹 UI</span>
+										<span class='feature-detail'>모던한 애니메이션과 직관적인 내비게이션</span>
+										<span class='feature-title'>🧑‍💼 관리자 대시보드</span>
+										<span class='feature-detail'>사용자, 커뮤니티 게시판, 댓글, 콘텐츠 관리</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 풀스택 통합</span>
+										<span class='feature-detail'>Docker로 오케스트레이션되는 프론트엔드, 백엔드, 데이터베이스</span>
+										<span class='feature-title'>🛠️ 역할 기반 접근 제어</span>
+										<span class='feature-detail'>관리자와 일반 사용자를 위한 분리된 경험</span>
+										<span class='feature-title'>🎯 커스텀 API 설계</span>
+										<span class='feature-detail'>콘텐츠, 인증, 관리자 액션을 위한 모듈형 엔드포인트</span>
+										<span class='feature-title'>📱 모바일 대응 UI</span>
+										<span class='feature-detail'>모든 화면 크기에서 매끄럽게 동작하도록 설계</span>
+										<span class='feature-title'>⚙️ 클린 코드 아키텍처</span>
+										<span class='feature-detail'>업계 모범 사례를 따른 유지보수하기 쉬운 구조</span>"
 										autoplay
     								muted
     								loop
@@ -599,7 +926,7 @@
 										poster="images/fulls/netflix-project.png"
     								style="width: 100%; height: auto; object-fit: cover;"
 										>
-										this browser does not support the video tag.
+										<span data-i18n="video_fallback">this browser does not support the video tag.</span>
 									</video>						
 									</div>
 								</a>
@@ -645,7 +972,43 @@
 											<span class='feature-title'>📱 Mobile-Ready UI</span>
 											<span class='feature-detail'>Designed to work smoothly across all screen sizes</span>
 											<span class='feature-title'>⚙️ Clean Code Architecture</span>
-											<span class='feature-detail'>Maintainable structure using industry best practices</span>" 
+											<span class='feature-detail'>Maintainable structure using industry best practices</span>"
+										data-desc-ko="<span class='emoji'>🎬</span> Netflix & Chill: 풀스택 스트리밍 플랫폼
+										React와 Spring Boot로 만든 모던 넷플릭스풍 앱
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>⚛️ 프론트엔드: React + Redux + Axios</span>
+										<span class='feature-detail'>현대적인 상태 관리와 API 연동</span>
+										<span class='feature-title'>☕ 백엔드: Spring Boot + MySQL</span>
+										<span class='feature-detail'>관계형 데이터베이스를 활용한 견고한 서버 아키텍처</span>
+										<span class='feature-title'>🐳 Docker화</span>
+										<span class='feature-detail'>프론트엔드, 백엔드, 데이터베이스를 통합한 컨테이너</span>
+										<span class='feature-title'>☁️ 클라우드 배포</span>
+										<span class='feature-detail'>미디어와 API를 클라우드에 호스팅</span>
+
+										<span class='section-title'>🔑 주요 기능</span>
+										<span class='feature-title'>🔎 영화 탐색 & 검색</span>
+										<span class='feature-detail'>검색 필터로 콘텐츠를 손쉽게 발견</span>
+										<span class='feature-title'>📽️ 예고편 재생</span>
+										<span class='feature-detail'>앱 내에서 공식 예고편 스트리밍</span>
+										<span class='feature-title'>⭐ 즐겨찾기 리스트</span>
+										<span class='feature-detail'>나만의 시청 목록 저장 및 관리</span>
+										<span class='feature-title'>🌐 반응형 다이나믹 UI</span>
+										<span class='feature-detail'>모던한 애니메이션과 직관적인 내비게이션</span>
+										<span class='feature-title'>🧑‍💼 관리자 대시보드</span>
+										<span class='feature-detail'>사용자, 커뮤니티 게시판, 댓글, 콘텐츠 관리</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 풀스택 통합</span>
+										<span class='feature-detail'>Docker로 오케스트레이션되는 프론트엔드, 백엔드, 데이터베이스</span>
+										<span class='feature-title'>🛠️ 역할 기반 접근 제어</span>
+										<span class='feature-detail'>관리자와 일반 사용자를 위한 분리된 경험</span>
+										<span class='feature-title'>🎯 커스텀 API 설계</span>
+										<span class='feature-detail'>콘텐츠, 인증, 관리자 액션을 위한 모듈형 엔드포인트</span>
+										<span class='feature-title'>📱 모바일 대응 UI</span>
+										<span class='feature-detail'>모든 화면 크기에서 매끄럽게 동작하도록 설계</span>
+										<span class='feature-title'>⚙️ 클린 코드 아키텍처</span>
+										<span class='feature-detail'>업계 모범 사례를 따른 유지보수하기 쉬운 구조</span>" 
 										>
 										<img src="images/netflix.ico" width="25" height="18" alt="Netflix And Chill"/>Netflix And Chill
 										<img src="images/click.ico" width="33" height="33" alt="Click"/>
@@ -691,6 +1054,36 @@
 											<span class='feature-detail'>GitHub OAuth, AWS services, Multer middleware</span>
 											<span class='feature-title'>🏗️ Robust Backend Architecture</span>
 											<span class='feature-detail'>Well-structured, scalable, and maintainable codebase</span>"
+										data-desc-ko="<span class='emoji'>📹</span> WeTube: 유튜브에서 영감을 받은 영상 스트리밍 플랫폼
+										Node.js, Express, MongoDB, Pug로 만든 풀스택 영상 플랫폼
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 백엔드: Node.js + Express + MongoDB</span>
+										<span class='feature-detail'>견고하고 확장 가능한 백엔드 아키텍처</span>
+										<span class='feature-title'>🎨 템플릿: Pug</span>
+										<span class='feature-detail'>더 나은 성능을 위한 효율적인 서버사이드 렌더링</span>
+										<span class='feature-title'>☁️ AWS S3</span>
+										<span class='feature-detail'>안전한 미디어 저장 및 관리</span>
+										<span class='feature-title'>🔐 GitHub OAuth</span>
+										<span class='feature-detail'>쉽고 안전한 인증</span>
+
+										<span class='section-title'>🎬 주요 기능</span>
+										<span class='feature-title'>📂 Multer를 이용한 영상 업로드</span>
+										<span class='feature-detail'>사용자가 개인 녹화 영상을 손쉽게 업로드</span>
+										<span class='feature-title'>▶️ 영상 재생 & 탐색</span>
+										<span class='feature-detail'>유튜브 핵심 경험을 온전히 구현</span>
+										<span class='feature-title'>💬 실시간 댓글</span>
+										<span class='feature-detail'>다이나믹한 토론으로 콘텐츠에 참여</span>
+										<span class='feature-title'>🔄 인터랙티브 UI</span>
+										<span class='feature-detail'>완전 반응형의 사용자 친화적 디자인</span>
+										<span class='feature-title'>🛡️ 안전한 미디어 처리</span>
+										<span class='feature-detail'>적절한 접근 제어와 함께 AWS S3로 안전하게 파일 관리</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 서드파티 연동</span>
+										<span class='feature-detail'>GitHub OAuth, AWS 서비스, Multer 미들웨어</span>
+										<span class='feature-title'>🏗️ 견고한 백엔드 아키텍처</span>
+										<span class='feature-detail'>잘 구조화되고 확장 가능하며 유지보수하기 쉬운 코드베이스</span>"
 										autoplay
     								muted
     								loop
@@ -698,7 +1091,7 @@
 										poster="images/fulls/wetube.png"
     								style="width: 100%; height: auto; object-fit: cover;"
 										>
-										this browser does not support the video tag.
+										<span data-i18n="video_fallback">this browser does not support the video tag.</span>
 									</video>			
 									</div>	
 								</a>
@@ -739,6 +1132,36 @@
 											<span class='feature-detail'>GitHub OAuth, AWS services, Multer middleware</span>
 											<span class='feature-title'>🏗️ Robust Backend Architecture</span>
 											<span class='feature-detail'>Well-structured, scalable, and maintainable codebase</span>"
+										data-desc-ko="<span class='emoji'>📹</span> WeTube: 유튜브에서 영감을 받은 영상 스트리밍 플랫폼
+										Node.js, Express, MongoDB, Pug로 만든 풀스택 영상 플랫폼
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧠 백엔드: Node.js + Express + MongoDB</span>
+										<span class='feature-detail'>견고하고 확장 가능한 백엔드 아키텍처</span>
+										<span class='feature-title'>🎨 템플릿: Pug</span>
+										<span class='feature-detail'>더 나은 성능을 위한 효율적인 서버사이드 렌더링</span>
+										<span class='feature-title'>☁️ AWS S3</span>
+										<span class='feature-detail'>안전한 미디어 저장 및 관리</span>
+										<span class='feature-title'>🔐 GitHub OAuth</span>
+										<span class='feature-detail'>쉽고 안전한 인증</span>
+
+										<span class='section-title'>🎬 주요 기능</span>
+										<span class='feature-title'>📂 Multer를 이용한 영상 업로드</span>
+										<span class='feature-detail'>사용자가 개인 녹화 영상을 손쉽게 업로드</span>
+										<span class='feature-title'>▶️ 영상 재생 & 탐색</span>
+										<span class='feature-detail'>유튜브 핵심 경험을 온전히 구현</span>
+										<span class='feature-title'>💬 실시간 댓글</span>
+										<span class='feature-detail'>다이나믹한 토론으로 콘텐츠에 참여</span>
+										<span class='feature-title'>🔄 인터랙티브 UI</span>
+										<span class='feature-detail'>완전 반응형의 사용자 친화적 디자인</span>
+										<span class='feature-title'>🛡️ 안전한 미디어 처리</span>
+										<span class='feature-detail'>적절한 접근 제어와 함께 AWS S3로 안전하게 파일 관리</span>
+
+										<span class='section-title'>🌐 하이라이트</span>
+										<span class='feature-title'>🧩 서드파티 연동</span>
+										<span class='feature-detail'>GitHub OAuth, AWS 서비스, Multer 미들웨어</span>
+										<span class='feature-title'>🏗️ 견고한 백엔드 아키텍처</span>
+										<span class='feature-detail'>잘 구조화되고 확장 가능하며 유지보수하기 쉬운 코드베이스</span>"
 											>
 										<img src="images/youtube.ico" width="25" height="25" alt="Wetube"/>Wetube
 										<img src="images/click.ico" width="33" height="33" alt="Click"/>
@@ -784,6 +1207,36 @@
 											<span class='feature-detail'>Real-time UI updates without reloading</span>
 											<span class='feature-title'>📱 Fully Responsive Layout</span>
 											<span class='feature-detail'>Smooth experience across all devices</span>"
+										data-desc-ko="<span class='emoji'>🍴</span> Forkify: 바닐라 JS 레시피 검색 앱
+										오직 JavaScript, HTML, CSS만으로 만든 다이나믹 레시피 앱
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧪 바닐라 자바스크립트</span>
+										<span class='feature-detail'>프레임워크 없이 순수 JavaScript로 구현</span>
+										<span class='feature-title'>🖼️ HTML & CSS</span>
+										<span class='feature-detail'>깔끔하고 반응형인 UI 디자인</span>
+										<span class='feature-title'>🌐 서드파티 API</span>
+										<span class='feature-detail'>외부 소스에서 레시피 데이터를 동적으로 가져옴</span>
+
+										<span class='section-title'>📋 주요 기능</span>
+										<span class='feature-title'>🔍 레시피 검색</span>
+										<span class='feature-detail'>키워드 검색으로 즉시 요리를 찾기</span>
+										<span class='feature-title'>📖 상세 재료 & 조리법</span>
+										<span class='feature-detail'>모든 요리에 대한 명확한 단계별 안내</span>
+										<span class='feature-title'>🔢 인분 수 조절</span>
+										<span class='feature-detail'>인분 수에 따라 실시간으로 재료량 업데이트</span>
+										<span class='feature-title'>⭐ 북마크 시스템</span>
+										<span class='feature-detail'>즐겨찾는 레시피를 저장해 빠르게 접근</span>
+										<span class='feature-title'>🧱 모듈형 아키텍처</span>
+										<span class='feature-detail'>체계적이고 확장 가능한 코드 구조</span>
+
+										<span class='section-title'>🌟 하이라이트</span>
+										<span class='feature-title'>💡 핵심 JS 개념 숙달</span>
+										<span class='feature-detail'>Async/await, 모듈 임포트, ES6+ 기능</span>
+										<span class='feature-title'>🗃️ 클라이언트 사이드 상태 관리</span>
+										<span class='feature-detail'>새로고침 없는 실시간 UI 업데이트</span>
+										<span class='feature-title'>📱 완전 반응형 레이아웃</span>
+										<span class='feature-detail'>모든 기기에서 매끄러운 경험</span>"
 										autoplay
     								muted
     								loop
@@ -791,7 +1244,7 @@
 										poster="images/fulls/forkify.png"
     								style="width: 100%; height: auto; object-fit: cover;"
 										>
-										this browser does not support the video tag.
+										<span data-i18n="video_fallback">this browser does not support the video tag.</span>
 									</video>						
 									</div>
 								</a>
@@ -832,6 +1285,36 @@
 											<span class='feature-detail'>Real-time UI updates without reloading</span>
 											<span class='feature-title'>📱 Fully Responsive Layout</span>
 											<span class='feature-detail'>Smooth experience across all devices</span>"
+										data-desc-ko="<span class='emoji'>🍴</span> Forkify: 바닐라 JS 레시피 검색 앱
+										오직 JavaScript, HTML, CSS만으로 만든 다이나믹 레시피 앱
+
+										<span class='section-title'>🛠️ 기술 스택</span>
+										<span class='feature-title'>🧪 바닐라 자바스크립트</span>
+										<span class='feature-detail'>프레임워크 없이 순수 JavaScript로 구현</span>
+										<span class='feature-title'>🖼️ HTML & CSS</span>
+										<span class='feature-detail'>깔끔하고 반응형인 UI 디자인</span>
+										<span class='feature-title'>🌐 서드파티 API</span>
+										<span class='feature-detail'>외부 소스에서 레시피 데이터를 동적으로 가져옴</span>
+
+										<span class='section-title'>📋 주요 기능</span>
+										<span class='feature-title'>🔍 레시피 검색</span>
+										<span class='feature-detail'>키워드 검색으로 즉시 요리를 찾기</span>
+										<span class='feature-title'>📖 상세 재료 & 조리법</span>
+										<span class='feature-detail'>모든 요리에 대한 명확한 단계별 안내</span>
+										<span class='feature-title'>🔢 인분 수 조절</span>
+										<span class='feature-detail'>인분 수에 따라 실시간으로 재료량 업데이트</span>
+										<span class='feature-title'>⭐ 북마크 시스템</span>
+										<span class='feature-detail'>즐겨찾는 레시피를 저장해 빠르게 접근</span>
+										<span class='feature-title'>🧱 모듈형 아키텍처</span>
+										<span class='feature-detail'>체계적이고 확장 가능한 코드 구조</span>
+
+										<span class='section-title'>🌟 하이라이트</span>
+										<span class='feature-title'>💡 핵심 JS 개념 숙달</span>
+										<span class='feature-detail'>Async/await, 모듈 임포트, ES6+ 기능</span>
+										<span class='feature-title'>🗃️ 클라이언트 사이드 상태 관리</span>
+										<span class='feature-detail'>새로고침 없는 실시간 UI 업데이트</span>
+										<span class='feature-title'>📱 완전 반응형 레이아웃</span>
+										<span class='feature-detail'>모든 기기에서 매끄러운 경험</span>"
 										><img src="images/forkify.png" width="25" height="25" alt="Forkify"/>Forkify Recipes
 										<img src="images/click.ico" width="33" height="33" alt="Click"/>
 									</a>
@@ -865,8 +1348,8 @@
 			<section id="blog" class="main style3 primary">
     		<div class="content">
         		<header>
-            		<h2>My Blog</h2>
-            		<p>My digital lab where I document things I learn, build, and break 😄</p>
+            		<h2 data-i18n="blog_title">My Blog</h2>
+            		<p data-i18n="blog_body">My digital lab where I document things I learn, build, and break 😄</p>
         		</header>
         
         		<article class="blog-card">
@@ -879,7 +1362,7 @@
                 		<span class="blog">Let's Hack The Moon</span>
                 	<img src="images/click.ico" width="33" height="33" alt="Click"/>
             			</h3>
-            			<p class="blog-excerpt">Curious at heart, figuring things out through trial, error, and a lot of messy code! 🤠</p>
+            			<p class="blog-excerpt" data-i18n="blog_excerpt">Curious at heart, figuring things out through trial, error, and a lot of messy code! 🤠</p>
         				</div>
     					</a>
 						</article>
@@ -890,20 +1373,20 @@
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
-						<h2>Say Hello!</h2>
-						<p>Got a project in mind, thinking about collaborating, or just want to talk code?
+						<h2 data-i18n="contact_title">Say Hello!</h2>
+						<p data-i18n-html="contact_body">Got a project in mind, thinking about collaborating, or just want to talk code?
 							<br>Feel free to reach out anytime.
 						<br/>	Drop me a message, and I'll get back to you faster than a build error on deployment. 😉</p>
 					</header>
 					<div class="box">
 						<form method="post" action="#" id="contact-form">
 							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" required/></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" required/></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6" required></textarea></div>
+								<div class="field half"><input type="text" name="name" placeholder="Name" data-i18n-placeholder="placeholder_name" required/></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" data-i18n-placeholder="placeholder_email" required/></div>
+								<div class="field"><textarea name="message" placeholder="Message" data-i18n-placeholder="placeholder_message" rows="6" required></textarea></div>
 							</div>
 							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
+								<li><input type="submit" value="Send Message" data-i18n-value="btn_send" /></li>
 							</ul>
 						</form>
 					</div>
@@ -918,13 +1401,13 @@
 						<li><a target="_blank" href="https://github.com/kimdahee0815" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						<li><a target="_blank" href="https://www.linkedin.com/in/dahee-kim-6aaa5b267/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 						<li><a target="_blank" href="https://discordapp.com/users/1077157910553038868" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
-						<li><a id="resume-download-btn" title="Download Resume (EN & KR)" class="icon solid fa-file-pdf"><span class="label">Resume</span></a></li>
+						<li><a id="resume-download-btn" data-i18n-attr="title:resume_title" title="Download Resume (EN & KR)" class="icon solid fa-file-pdf"><span class="label" data-i18n="resume_label">Resume</span></a></li>
 						<!-- <li><a target="_blank" href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
 					</ul>
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; Dahee Kim</li></li>
+						<li>&copy; <span data-i18n="site_name">Dahee Kim</span></li></li>
 					</ul>
 
 			</footer>
@@ -938,6 +1421,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+			<script src="assets/js/i18n.js"></script>
 			<script src="assets/js/main.js"></script>
 			
 	</body>

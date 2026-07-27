@@ -107,7 +107,8 @@
                 const mediaSrc = btn.getAttribute("data-demo");
                 const mediaType = btn.getAttribute("data-type") || "image";
                 const projectTitle = btn.getAttribute("data-title") || "";
-                const projectDesc = btn.getAttribute("data-desc") || "";
+                const isKo = window.currentLang === "ko";
+                const projectDesc = (isKo && btn.getAttribute("data-desc-ko")) || btn.getAttribute("data-desc") || "";
                 const projectLink = btn.getAttribute("data-link") || null;
 
                 if (projectLink) {
@@ -293,7 +294,7 @@
     /*--/ Star Typed /--*/
     if ($(".text-slider").length == 1) {
         var typed_strings = $(".text-slider-items").text();
-        var typed = new Typed(".text-slider", {
+        window.typedInstance = new Typed(".text-slider", {
             strings: typed_strings.split(","),
             typeSpeed: 80,
             loop: true,
@@ -393,16 +394,17 @@
             body: JSON.stringify({ name, email, message }),
         })
             .then((res) => {
+                const isKo = window.currentLang === "ko";
                 if (res.ok) {
-                    alert("✅ Sent Your Message successfully!");
+                    alert(isKo ? "✅ 메시지가 성공적으로 전송되었습니다!" : "✅ Sent Your Message successfully!");
                     $("#contact-form")[0].reset();
                 } else {
-                    alert("❌ Try again!");
+                    alert(isKo ? "❌ 다시 시도해주세요!" : "❌ Try again!");
                 }
             })
             .catch((err) => {
                 console.error(err);
-                alert("⚠️ Server error!");
+                alert(window.currentLang === "ko" ? "⚠️ 서버 오류가 발생했습니다!" : "⚠️ Server error!");
             });
     });
 
