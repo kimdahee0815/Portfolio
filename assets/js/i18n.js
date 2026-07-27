@@ -56,7 +56,7 @@
             nav_who: "소개",
             nav_drives: "가치관",
             nav_bring: "강점",
-            nav_work: "작업물",
+            nav_work: "프로젝트",
             nav_blog: "블로그",
             nav_contact: "연락처",
             resume_title: "이력서 다운로드 (영문 & 국문)",
@@ -79,7 +79,7 @@
             two_body:
                 "💻 <strong>풀스택 개발</strong><br>\n<strong>기획부터 개발, 배포까지</strong> 전 과정을 수행할 수 있으며, 모던한 <strong>프론트엔드</strong>, 확장 가능한 <strong>백엔드 시스템</strong>, <strong>실제 서비스 수준의 애플리케이션</strong>을 만듭니다.\n<br><br>\n\n🤖 <strong>AI & 클라우드</strong><br>\n<strong>LLM</strong>, <strong>RAG</strong>, <strong>LangChain</strong>, <strong>MCP</strong>, <strong>컴퓨터 비전</strong>을 활용한 프로젝트를 만들었고, <strong>AWS</strong>와 <strong>Docker</strong>로 애플리케이션을 배포합니다.\n<br><br>\n\n🛠️ <strong>기술 스택</strong><br>\n<strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, <strong>Nest.js</strong>, <strong>Spring Boot</strong>, <strong>PostgreSQL</strong>, <strong>MongoDB</strong>, <strong>MySQL</strong>, <strong>Redis</strong> 경험이 있습니다.\n<br><br>\n\n🌍 <strong>적응력</strong><br>\n저의 강점 중 하나는 <strong>새로운 기술을 빠르게 습득</strong>해 실제 프로젝트에 적용하는 것으로, 새로운 기술을 빠르게 익혀 실제 프로젝트에 적용하며, 필요한 역할을 빠르게 수행할 수 있습니다.",
 
-            work_title: "제 작업물",
+            work_title: "프로젝트",
             work_body:
                 "제가 직접 기획하고 개발한 다양한 웹 프로젝트를 소개합니다. <br/>다음과 같은 프로젝트들을 포함합니다: <br/>- CCTV 기반 산업 안전 모니터링 시스템<br/>- 글로벌 개발자 협업을 위한 풀스택 플랫폼 (개발 중)<br/>- 투어 예약 시스템<br/>- 웨딩 플래닝 도구<br/>- 영화 검색 엔진<br/>- 영상 공유 사이트<br/>- 레시피 검색기 <br/>각 프로젝트는 실제 배포되어 있거나, 미리보기와 소스 코드로 확인하실 수 있습니다.",
 
