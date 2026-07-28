@@ -9,9 +9,9 @@
             nav_work: "My Work",
             nav_blog: "Blog",
             nav_contact: "Contact",
-            resume_title: "Download Resume (EN & KR)",
+            resume_title: "Download Resume",
             resume_label: "Resume",
-            portfolio_title: "Download Portfolio (EN & KR)",
+            portfolio_title: "Download Portfolio",
             portfolio_label: "Portfolio",
             lang_toggle: "KO",
 
@@ -61,9 +61,9 @@
             nav_work: "프로젝트",
             nav_blog: "블로그",
             nav_contact: "연락처",
-            resume_title: "이력서 다운로드 (영문 & 국문)",
+            resume_title: "이력서 다운로드",
             resume_label: "이력서",
-            portfolio_title: "포트폴리오 다운로드 (영문 & 국문)",
+            portfolio_title: "포트폴리오 다운로드",
             portfolio_label: "포트폴리오",
             lang_toggle: "EN",
 
@@ -75,11 +75,11 @@
             three_body:
                 "👋 안녕하세요!\n<br>\n저는 <strong>좋은 아이디어는 어디서든 시작될 수 있다</strong>고 믿는 <strong>풀스택 개발자</strong>입니다.\n<br><br>\n💡 <strong>질문</strong>은 <strong>프로젝트</strong>가 됩니다.\n<br>\n🚀 <strong>프로젝트</strong>는 <strong>경험</strong>이 됩니다.\n<br>\n🌱 <strong>경험</strong>은 <strong>성장</strong>이 됩니다.\n<br>\n<br>\n저에게 최고의 일터란 <strong>좋은 사람들</strong>과 <strong>의미 있는 문제</strong>가 만나는 곳입니다.\n<br> \n저는 <strong>좋은 사람들과 함께 배우고</strong>, <strong>사람들에게 실질적인 도움이 되는 서비스를 만드는 일</strong>이 가장 가치 있는 기회라고 믿습니다.",
 
-            one_title: "나를 움직이는 것",
+            one_title: "가치관",
             one_body:
                 '💡 <strong>호기심</strong>은 제가 새로운 도전을 시작하는 가장 큰 원동력입니다. 사소한 질문 하나가 종종 프로젝트로 자라나고, <strong>모든 프로젝트는 저에게 새로운 것을 가르쳐줍니다.</strong>\n<br><br>\n🐞 저는 <strong>디버깅</strong>을 할 때 가장 많이 배운다고 믿습니다. 버그를 마주할 때마다 <strong>"왜 이런 문제가 발생했을까?"</strong>를 고민하게 되고, 그 과정에서 시스템이 실제로 어떻게 동작하는지 깊이 이해하게 됩니다.\n<br><br>\n🤝 함께 일하는 사람들은 저에게 가장 큰 성장의 원동력입니다. 저는 제게 <strong>도전 의식을 불어넣고</strong>, <strong>영감을 주고</strong>, <strong>더 나은 엔지니어</strong>로 성장하도록 도와주는 사람들에게 배우는 것을 즐깁니다.\n<br><br>\n🌱 제가 만드는 서비스들이 사람들의 삶을 <strong>조금 더 편하게</strong>, <strong>조금 더 단순하게</strong>, <strong>조금 더 즐겁게</strong> 만들 수 있다는 생각이 저를 움직입니다.\n<br><br>\n🚀 모든 프로젝트는 <strong>배우고</strong>, <strong>좋은 사람들과 함께 성장하고</strong>, <strong>의미 있는 무언가를 만들</strong> 기회입니다.',
 
-            two_title: "나의 강점",
+            two_title: "강점",
             two_body:
                 "💻 <strong>풀스택 개발</strong><br>\n<strong>기획부터 개발, 배포까지</strong> 전 과정을 수행할 수 있으며, 모던한 <strong>프론트엔드</strong>, 확장 가능한 <strong>백엔드 시스템</strong>, <strong>실제 서비스 수준의 애플리케이션</strong>을 만듭니다.\n<br><br>\n\n🤖 <strong>AI & 클라우드</strong><br>\n<strong>LLM</strong>, <strong>RAG</strong>, <strong>LangChain</strong>, <strong>MCP</strong>, <strong>컴퓨터 비전</strong>을 활용한 프로젝트를 만들었고, <strong>AWS</strong>와 <strong>Docker</strong>로 애플리케이션을 배포합니다.\n<br><br>\n\n🛠️ <strong>기술 스택</strong><br>\n<strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, <strong>Nest.js</strong>, <strong>Spring Boot</strong>, <strong>PostgreSQL</strong>, <strong>MongoDB</strong>, <strong>MySQL</strong>, <strong>Redis</strong> 경험이 있습니다.\n<br><br>\n\n🌍 <strong>적응력</strong><br>\n저의 강점 중 하나는 <strong>새로운 기술을 빠르게 습득</strong>해 실제 프로젝트에 적용하는 것으로, 새로운 기술을 빠르게 익혀 실제 프로젝트에 적용하며, 필요한 역할을 빠르게 수행할 수 있습니다.",
 
