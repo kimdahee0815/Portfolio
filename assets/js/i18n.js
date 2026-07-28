@@ -13,7 +13,7 @@
             resume_label: "Resume",
             portfolio_title: "Download Portfolio (EN & KR)",
             portfolio_label: "Portfolio",
-            lang_toggle: "한국어",
+            lang_toggle: "KO",
 
             intro_roles: "Software Engineer,Full-Stack Developer,Front-End Developer,Back-End Developer",
             btn_more: "More",
@@ -65,7 +65,7 @@
             resume_label: "이력서",
             portfolio_title: "포트폴리오 다운로드 (영문 & 국문)",
             portfolio_label: "포트폴리오",
-            lang_toggle: "ENGLISH",
+            lang_toggle: "EN",
 
             intro_roles: "소프트웨어 엔지니어,풀스택 개발자,프론트엔드 개발자,백엔드 개발자",
             btn_more: "더보기",
