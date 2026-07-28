@@ -159,21 +159,17 @@
             btn.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                const resumes = [
-                    { url: "assets/resume/DaheeKim_Resume_EN.pdf", filename: "DaheeKim_Resume_EN.pdf" },
-                    { url: "assets/resume/DaheeKim_Resume_KR.pdf", filename: "DaheeKim_Resume_KR.pdf" },
-                ];
+                const resume =
+                    window.currentLang === "ko"
+                        ? { url: "assets/resume/DaheeKim_Resume_KR.pdf", filename: "DaheeKim_Resume_KR.pdf" }
+                        : { url: "assets/resume/DaheeKim_Resume_EN.pdf", filename: "DaheeKim_Resume_EN.pdf" };
 
-                resumes.forEach((resume, index) => {
-                    setTimeout(() => {
-                        const link = document.createElement("a");
-                        link.href = resume.url;
-                        link.download = resume.filename;
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                    }, index * 300);
-                });
+                const link = document.createElement("a");
+                link.href = resume.url;
+                link.download = resume.filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             });
         });
     });
@@ -185,21 +181,17 @@
             btn.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                const portfolios = [
-                    { url: "assets/portfolio/DaheeKim_Portfolio_EN.pdf", filename: "DaheeKim_Portfolio_EN.pdf" },
-                    { url: "assets/portfolio/DaheeKim_Portfolio_KR.pdf", filename: "DaheeKim_Portfolio_KR.pdf" },
-                ];
+                const portfolio =
+                    window.currentLang === "ko"
+                        ? { url: "assets/portfolio/DaheeKim_Portfolio_KR.pdf", filename: "DaheeKim_Portfolio_KR.pdf" }
+                        : { url: "assets/portfolio/DaheeKim_Portfolio_EN.pdf", filename: "DaheeKim_Portfolio_EN.pdf" };
 
-                portfolios.forEach((portfolio, index) => {
-                    setTimeout(() => {
-                        const link = document.createElement("a");
-                        link.href = portfolio.url;
-                        link.download = portfolio.filename;
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                    }, index * 300);
-                });
+                const link = document.createElement("a");
+                link.href = portfolio.url;
+                link.download = portfolio.filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             });
         });
     });
