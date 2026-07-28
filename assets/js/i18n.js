@@ -115,8 +115,7 @@
 
         if (saved === "en" || saved === "ko") return saved;
 
-        var browserLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
-        return browserLang.indexOf("ko") === 0 ? "ko" : "en";
+        return "en";
     }
 
     function applyTranslations(lang) {
