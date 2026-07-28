@@ -179,6 +179,32 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
+        const portfolioButtons = document.querySelectorAll("#portfolio-download-btn");
+
+        portfolioButtons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const portfolios = [
+                    { url: "assets/portfolio/DaheeKim_Portfolio_EN.pdf", filename: "DaheeKim_Portfolio_EN.pdf" },
+                    { url: "assets/portfolio/DaheeKim_Portfolio_KR.pdf", filename: "DaheeKim_Portfolio_KR.pdf" },
+                ];
+
+                portfolios.forEach((portfolio, index) => {
+                    setTimeout(() => {
+                        const link = document.createElement("a");
+                        link.href = portfolio.url;
+                        link.download = portfolio.filename;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }, index * 300);
+                });
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
         const observerOptions = {
             threshold: 0.01,
             rootMargin: "0px 0px -90px 0px",

@@ -1418,6 +1418,11 @@ ul.headericons a {
     color: white;
 }
 
+#resume-download-btn,
+#portfolio-download-btn {
+    cursor: pointer !important;
+}
+
 ul.headericons .lang-toggle-btn {
     width: auto;
     height: 2em;

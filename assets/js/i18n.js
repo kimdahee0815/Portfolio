@@ -11,6 +11,8 @@
             nav_contact: "Contact",
             resume_title: "Download Resume (EN & KR)",
             resume_label: "Resume",
+            portfolio_title: "Download Portfolio (EN & KR)",
+            portfolio_label: "Portfolio",
             lang_toggle: "한국어",
 
             intro_roles: "Software Engineer,Full-Stack Developer,Front-End Developer,Back-End Developer",
@@ -61,6 +63,8 @@
             nav_contact: "연락처",
             resume_title: "이력서 다운로드 (영문 & 국문)",
             resume_label: "이력서",
+            portfolio_title: "포트폴리오 다운로드 (영문 & 국문)",
+            portfolio_label: "포트폴리오",
             lang_toggle: "ENGLISH",
 
             intro_roles: "소프트웨어 엔지니어,풀스택 개발자,프론트엔드 개발자,백엔드 개발자",
